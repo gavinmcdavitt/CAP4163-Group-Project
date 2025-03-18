@@ -1,0 +1,1 @@
+Using pytorch, please generate a file title p1-full.py that pulls training data from a file called zip_train.txt (using the format shown in the train_example.txt file in the project files), then tests the network on test cases from a file titled zip_test.txt. Make sure to 

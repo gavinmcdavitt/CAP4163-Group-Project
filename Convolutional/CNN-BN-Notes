@@ -1,0 +1,19 @@
+Batch Size 2
+    Time: 92.08 seconds
+    Accuracy: 96.31
+    Early Stopped after 11 Epochs of 3646 steps each
+
+Batch Size 16
+    Time: 15.39 seconds
+    Accuracy: 96.81
+    Early Stopped after 14 Epochs of 456 steps each
+
+Batch Size 64
+    Time: 4.86 seconds
+    Accuracy: 96.61
+    All 15 Epochs used, 114 steps each
+
+Batch Size 256
+    Time: 2.44 seconds
+    Accuracy: 96.16
+    All 15 Epochs used, 29 steps each

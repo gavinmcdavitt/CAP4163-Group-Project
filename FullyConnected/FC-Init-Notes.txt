@@ -1,0 +1,86 @@
+Too Small Init:
+Starting training with initialization: normal, gain: 0.01, learning rate: 0.01
+Epoch [1/20], Loss: 2.2834, Train Acc: 16.29%, Test Acc: 17.89%
+Epoch [2/20], Loss: 2.2705, Train Acc: 16.38%, Test Acc: 17.89%
+Epoch [3/20], Loss: 2.2702, Train Acc: 16.38%, Test Acc: 17.89%
+Epoch [4/20], Loss: 2.2702, Train Acc: 16.38%, Test Acc: 17.89%
+Epoch [5/20], Loss: 2.2701, Train Acc: 16.38%, Test Acc: 17.89%
+Epoch [6/20], Loss: 2.2700, Train Acc: 16.38%, Test Acc: 17.89%
+Early stopping after 6 epochs     
+Training completed in 1.75 seconds
+Training curves saved
+Accuracy of digit 0: 100.00% (359/359)
+Accuracy of digit 1: 0.00% (0/264)
+Accuracy of digit 2: 0.00% (0/198)
+Accuracy of digit 3: 0.00% (0/166)
+Accuracy of digit 4: 0.00% (0/200)
+Accuracy of digit 5: 0.00% (0/160)
+Accuracy of digit 6: 0.00% (0/170)
+Accuracy of digit 7: 0.00% (0/147)
+Accuracy of digit 8: 0.00% (0/166)
+Accuracy of digit 9: 0.00% (0/177)
+Overall Test Accuracy: 17.89% (359/2007)
+
+Effective Init:
+Starting training with initialization: kaiming_normal, gain: 1.0, learning rate: 0.01
+Epoch [1/20], Loss: 0.7025, Train Acc: 78.00%, Test Acc: 88.79%
+Epoch [2/20], Loss: 0.2022, Train Acc: 94.40%, Test Acc: 90.78%
+Epoch [3/20], Loss: 0.1391, Train Acc: 95.83%, Test Acc: 91.48%
+Epoch [4/20], Loss: 0.1042, Train Acc: 97.15%, Test Acc: 92.43%
+Epoch [5/20], Loss: 0.0784, Train Acc: 97.86%, Test Acc: 92.48%
+Epoch [6/20], Loss: 0.0596, Train Acc: 98.44%, Test Acc: 92.43%
+Epoch [7/20], Loss: 0.0540, Train Acc: 98.30%, Test Acc: 92.28%
+Epoch [8/20], Loss: 0.0373, Train Acc: 99.12%, Test Acc: 92.43%
+Epoch [9/20], Loss: 0.0293, Train Acc: 99.31%, Test Acc: 93.32%
+Epoch [10/20], Loss: 0.0214, Train Acc: 99.59%, Test Acc: 92.68%
+Epoch [11/20], Loss: 0.0170, Train Acc: 99.70%, Test Acc: 92.97%
+Epoch [12/20], Loss: 0.0129, Train Acc: 99.82%, Test Acc: 93.12%
+Epoch [13/20], Loss: 0.0102, Train Acc: 99.90%, Test Acc: 92.97%
+Epoch [14/20], Loss: 0.0092, Train Acc: 99.95%, Test Acc: 92.87%
+Early stopping after 14 epochs
+Training completed in 3.09 seconds
+Training curves saved
+Accuracy of digit 0: 98.33% (353/359)
+Accuracy of digit 1: 97.73% (258/264)
+Accuracy of digit 2: 93.43% (185/198)
+Accuracy of digit 3: 89.76% (149/166)
+Accuracy of digit 4: 90.00% (180/200)
+Accuracy of digit 5: 90.00% (144/160)
+Accuracy of digit 6: 94.12% (160/170)
+Accuracy of digit 7: 94.56% (139/147)
+Accuracy of digit 8: 84.94% (141/166)
+Accuracy of digit 9: 92.66% (164/177)
+Overall Test Accuracy: 93.32% (1873/2007)
+
+Too Large Init:
+Starting training with initialization: normal, gain: 10.0, learning rate: 0.01
+Epoch [1/20], Loss: nan, Train Acc: 16.24%, Test Acc: 17.89%
+Epoch [2/20], Loss: nan, Train Acc: 16.38%, Test Acc: 17.89%
+Epoch [3/20], Loss: nan, Train Acc: 16.38%, Test Acc: 17.89%
+Epoch [4/20], Loss: nan, Train Acc: 16.38%, Test Acc: 17.89%
+Epoch [5/20], Loss: nan, Train Acc: 16.38%, Test Acc: 17.89%
+Epoch [6/20], Loss: nan, Train Acc: 16.38%, Test Acc: 17.89%
+Early stopping after 6 epochs
+Training completed in 1.51 seconds
+Training curves saved
+Accuracy of digit 0: 100.00% (359/359)
+Accuracy of digit 1: 0.00% (0/264)
+Accuracy of digit 2: 0.00% (0/198)
+Accuracy of digit 3: 0.00% (0/166)
+Accuracy of digit 4: 0.00% (0/200)
+Accuracy of digit 5: 0.00% (0/160)
+Accuracy of digit 6: 0.00% (0/170)
+Accuracy of digit 7: 0.00% (0/147)
+Accuracy of digit 8: 0.00% (0/166)
+Accuracy of digit 9: 0.00% (0/177)
+Overall Test Accuracy: 17.89% (359/2007)
+
+
+Summary of Initialization Experiments:
+Strategy               Accuracy
+-------------------- ----------
+Too Small Init            17.89%
+Effective Init            93.32%
+Too Large Init            17.89%
+
+Experiment complete. Final accuracy: 93.32%

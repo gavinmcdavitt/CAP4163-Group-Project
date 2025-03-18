@@ -1,0 +1,8 @@
+Momentum 0.5
+    Initial accuracy 30.54%, rose to 91.18%
+
+Momentum 0.9
+    Initial accuracy 82.16%, rose to 94.77%
+
+Momentum 0.99
+    Initial accuracy 86.55%, rose to 95.71%
