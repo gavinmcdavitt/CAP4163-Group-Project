@@ -1,0 +1,51 @@
+Training model 1/3...
+Epoch [1/10], Loss: 0.4203
+Epoch [2/10], Loss: 0.1744
+Epoch [3/10], Loss: 0.1242
+Epoch [4/10], Loss: 0.1099
+Epoch [5/10], Loss: 0.1002
+Epoch [6/10], Loss: 0.1030
+Epoch [7/10], Loss: 0.0807
+Epoch [8/10], Loss: 0.0532
+Epoch [9/10], Loss: 0.0674
+Epoch [10/10], Loss: 0.0603
+Model saved to ensemble_model_1.pth
+Training model 2/3...
+Epoch [1/10], Loss: 0.5956
+Epoch [2/10], Loss: 0.1853
+Epoch [3/10], Loss: 0.1235
+Epoch [4/10], Loss: 0.0962
+Epoch [5/10], Loss: 0.0856
+Epoch [6/10], Loss: 0.0957
+Epoch [7/10], Loss: 0.0945
+Epoch [8/10], Loss: 0.0670
+Epoch [9/10], Loss: 0.0499
+Epoch [10/10], Loss: 0.0720
+Model saved to ensemble_model_2.pth
+Training model 3/3...
+Epoch [1/10], Loss: 1.9595
+Epoch [2/10], Loss: 0.3727
+Epoch [3/10], Loss: 0.2111
+Epoch [4/10], Loss: 0.1501
+Epoch [5/10], Loss: 0.1247
+Epoch [6/10], Loss: 0.0829
+Epoch [7/10], Loss: 0.0700
+Epoch [8/10], Loss: 0.0897
+Epoch [9/10], Loss: 0.0801
+Epoch [10/10], Loss: 0.0874
+Model saved to ensemble_model_3.pth
+Model 1 Accuracy: 93.47%
+Model 2 Accuracy: 93.17%
+Model 3 Accuracy: 91.73%
+Ensemble (Soft Voting) Accuracy: 94.22%
+Ensemble (Hard Voting) Accuracy: 93.82%
+Accuracy of digit 0: 98.33% (353/359)
+Accuracy of digit 1: 95.45% (252/264)
+Accuracy of digit 2: 92.93% (184/198)
+Accuracy of digit 3: 89.16% (148/166)
+Accuracy of digit 4: 91.50% (183/200)
+Accuracy of digit 5: 93.12% (149/160)
+Accuracy of digit 6: 94.71% (161/170)
+Accuracy of digit 7: 92.52% (136/147)
+Accuracy of digit 8: 92.17% (153/166)
+Accuracy of digit 9: 97.18% (172/177)
