@@ -1,0 +1,184 @@
+================================================================================
+Testing learning rate: 0.0001
+================================================================================
+
+Using device: cuda
+Loading training data...
+Loading test data...
+Starting training with learning rate: 0.0001
+Epoch [1/20], Loss: 2.4147, Train Acc: 22.15%, Test Acc: 29.50%
+Epoch [2/20], Loss: 1.9411, Train Acc: 38.29%, Test Acc: 39.91%
+Epoch [3/20], Loss: 1.7154, Train Acc: 47.20%, Test Acc: 45.84%
+Epoch [4/20], Loss: 1.5476, Train Acc: 52.42%, Test Acc: 50.07%
+Epoch [5/20], Loss: 1.4131, Train Acc: 55.90%, Test Acc: 54.11%
+Epoch [6/20], Loss: 1.3007, Train Acc: 59.46%, Test Acc: 56.20%
+Epoch [7/20], Loss: 1.2017, Train Acc: 63.27%, Test Acc: 60.14%
+Epoch [8/20], Loss: 1.1116, Train Acc: 66.58%, Test Acc: 63.23%
+Epoch [9/20], Loss: 1.0285, Train Acc: 70.10%, Test Acc: 66.22%
+Epoch [10/20], Loss: 0.9519, Train Acc: 73.16%, Test Acc: 69.71%
+Epoch [11/20], Loss: 0.8817, Train Acc: 75.75%, Test Acc: 72.65%
+Epoch [12/20], Loss: 0.8166, Train Acc: 78.01%, Test Acc: 74.49%
+Epoch [13/20], Loss: 0.7578, Train Acc: 80.11%, Test Acc: 76.43%
+Epoch [14/20], Loss: 0.7059, Train Acc: 81.77%, Test Acc: 77.33%
+Epoch [15/20], Loss: 0.6600, Train Acc: 82.79%, Test Acc: 78.43%
+Epoch [16/20], Loss: 0.6201, Train Acc: 83.94%, Test Acc: 79.42%
+Epoch [17/20], Loss: 0.5849, Train Acc: 84.90%, Test Acc: 80.47%
+Epoch [18/20], Loss: 0.5539, Train Acc: 85.71%, Test Acc: 81.02%
+Epoch [19/20], Loss: 0.5266, Train Acc: 86.27%, Test Acc: 81.76%
+Epoch [20/20], Loss: 0.5022, Train Acc: 87.00%, Test Acc: 82.61%
+Training completed in 4.47 seconds
+Training curves saved
+Accuracy of digit 0: 93.31% (335/359)
+Accuracy of digit 1: 93.94% (248/264)
+Accuracy of digit 2: 74.24% (147/198)
+Accuracy of digit 3: 77.11% (128/166)
+Accuracy of digit 4: 78.00% (156/200)
+Accuracy of digit 5: 68.75% (110/160)
+Accuracy of digit 6: 89.41% (152/170)
+Accuracy of digit 7: 83.67% (123/147)
+Accuracy of digit 8: 71.08% (118/166)
+Accuracy of digit 9: 79.66% (141/177)
+Overall Test Accuracy: 82.61% (1658/2007)
+
+
+================================================================================
+Testing learning rate: 0.001
+================================================================================
+
+Using device: cuda
+Loading training data...
+Loading test data...
+Starting training with learning rate: 0.001
+Epoch [1/20], Loss: 1.6283, Train Acc: 49.02%, Test Acc: 65.37%
+Epoch [2/20], Loss: 0.7481, Train Acc: 80.14%, Test Acc: 81.86%
+Epoch [3/20], Loss: 0.4462, Train Acc: 88.14%, Test Acc: 85.90%
+Epoch [4/20], Loss: 0.3390, Train Acc: 91.08%, Test Acc: 87.79%
+Epoch [5/20], Loss: 0.2848, Train Acc: 92.22%, Test Acc: 88.44%
+Epoch [6/20], Loss: 0.2505, Train Acc: 93.35%, Test Acc: 89.34%
+Epoch [7/20], Loss: 0.2258, Train Acc: 93.98%, Test Acc: 89.64%
+Epoch [8/20], Loss: 0.2081, Train Acc: 94.43%, Test Acc: 89.94%
+Epoch [9/20], Loss: 0.1937, Train Acc: 94.76%, Test Acc: 90.13%
+Epoch [10/20], Loss: 0.1806, Train Acc: 95.06%, Test Acc: 90.73%
+Epoch [11/20], Loss: 0.1697, Train Acc: 95.17%, Test Acc: 90.73%
+Epoch [12/20], Loss: 0.1596, Train Acc: 95.50%, Test Acc: 90.78%
+Epoch [13/20], Loss: 0.1520, Train Acc: 95.87%, Test Acc: 91.08%
+Epoch [14/20], Loss: 0.1442, Train Acc: 96.09%, Test Acc: 91.33%
+Epoch [15/20], Loss: 0.1373, Train Acc: 96.21%, Test Acc: 91.08%
+Epoch [16/20], Loss: 0.1309, Train Acc: 96.37%, Test Acc: 91.28%
+Epoch [17/20], Loss: 0.1249, Train Acc: 96.60%, Test Acc: 91.43%
+Epoch [18/20], Loss: 0.1197, Train Acc: 96.79%, Test Acc: 91.38%
+Epoch [19/20], Loss: 0.1156, Train Acc: 96.80%, Test Acc: 91.53%
+Epoch [20/20], Loss: 0.1103, Train Acc: 97.09%, Test Acc: 91.48%
+Training completed in 4.87 seconds
+Training curves saved
+Accuracy of digit 0: 98.05% (352/359)
+Accuracy of digit 1: 95.83% (253/264)
+Accuracy of digit 2: 88.38% (175/198)
+Accuracy of digit 3: 87.35% (145/166)
+Accuracy of digit 4: 89.00% (178/200)
+Accuracy of digit 5: 88.12% (141/160)
+Accuracy of digit 6: 92.94% (158/170)
+Accuracy of digit 7: 91.84% (135/147)
+Accuracy of digit 8: 82.53% (137/166)
+Accuracy of digit 9: 92.09% (163/177)
+Overall Test Accuracy: 91.53% (1837/2007)
+
+
+================================================================================
+Testing learning rate: 0.01
+================================================================================
+
+Using device: cuda
+Loading training data...
+Loading test data...
+Starting training with learning rate: 0.01
+Epoch [1/20], Loss: 0.7025, Train Acc: 78.00%, Test Acc: 88.79%
+Epoch [2/20], Loss: 0.2022, Train Acc: 94.40%, Test Acc: 90.78%
+Epoch [3/20], Loss: 0.1391, Train Acc: 95.83%, Test Acc: 91.48%
+Epoch [4/20], Loss: 0.1042, Train Acc: 97.15%, Test Acc: 92.43%
+Epoch [5/20], Loss: 0.0784, Train Acc: 97.86%, Test Acc: 92.48%
+Epoch [6/20], Loss: 0.0596, Train Acc: 98.44%, Test Acc: 92.43%
+Epoch [7/20], Loss: 0.0540, Train Acc: 98.30%, Test Acc: 92.28%
+Epoch [8/20], Loss: 0.0373, Train Acc: 99.12%, Test Acc: 92.43%
+Epoch [9/20], Loss: 0.0293, Train Acc: 99.31%, Test Acc: 93.32%
+Epoch [10/20], Loss: 0.0214, Train Acc: 99.59%, Test Acc: 92.68%
+Epoch [11/20], Loss: 0.0170, Train Acc: 99.70%, Test Acc: 92.97%
+Epoch [12/20], Loss: 0.0129, Train Acc: 99.82%, Test Acc: 93.12%
+Epoch [13/20], Loss: 0.0102, Train Acc: 99.90%, Test Acc: 92.97%
+Epoch [14/20], Loss: 0.0092, Train Acc: 99.95%, Test Acc: 92.87%
+Early stopping after 14 epochs
+Training completed in 3.51 seconds
+Training curves saved
+Accuracy of digit 0: 98.33% (353/359)
+Accuracy of digit 1: 97.73% (258/264)
+Accuracy of digit 2: 93.43% (185/198)
+Accuracy of digit 3: 89.76% (149/166)
+Accuracy of digit 4: 90.00% (180/200)
+Accuracy of digit 5: 90.00% (144/160)
+Accuracy of digit 6: 94.12% (160/170)
+Accuracy of digit 7: 94.56% (139/147)
+Accuracy of digit 8: 84.94% (141/166)
+Accuracy of digit 9: 92.66% (164/177)
+Overall Test Accuracy: 93.32% (1873/2007)
+
+
+================================================================================
+Testing learning rate: 0.1
+================================================================================
+
+Using device: cuda
+Loading training data...
+Loading test data...
+Starting training with learning rate: 0.1
+Epoch [1/20], Loss: 0.5913, Train Acc: 81.88%, Test Acc: 87.19%
+Epoch [2/20], Loss: 0.2532, Train Acc: 92.70%, Test Acc: 87.59%
+Epoch [3/20], Loss: 0.2374, Train Acc: 93.77%, Test Acc: 88.54%
+Epoch [4/20], Loss: 0.1529, Train Acc: 96.08%, Test Acc: 92.18%
+Epoch [5/20], Loss: 0.1081, Train Acc: 96.93%, Test Acc: 91.73%
+Epoch [6/20], Loss: 0.0879, Train Acc: 97.57%, Test Acc: 93.27%
+Epoch [7/20], Loss: 0.1156, Train Acc: 96.80%, Test Acc: 92.83%
+Epoch [8/20], Loss: 0.0932, Train Acc: 97.54%, Test Acc: 92.73%
+Epoch [9/20], Loss: 0.0813, Train Acc: 97.71%, Test Acc: 90.78%
+Epoch [10/20], Loss: 0.1018, Train Acc: 97.41%, Test Acc: 90.13%
+Epoch [11/20], Loss: 0.0799, Train Acc: 97.92%, Test Acc: 93.12%
+Early stopping after 11 epochs
+Training completed in 2.81 seconds
+Training curves saved
+Accuracy of digit 0: 98.33% (353/359)
+Accuracy of digit 1: 96.21% (254/264)
+Accuracy of digit 2: 94.44% (187/198)
+Accuracy of digit 3: 89.76% (149/166)
+Accuracy of digit 4: 94.00% (188/200)
+Accuracy of digit 5: 89.38% (143/160)
+Accuracy of digit 6: 95.29% (162/170)
+Accuracy of digit 7: 85.03% (125/147)
+Accuracy of digit 8: 86.75% (144/166)
+Accuracy of digit 9: 94.35% (167/177)
+Overall Test Accuracy: 93.27% (1872/2007)
+
+
+Summary of Learning Rate Experiments:
+Learning Rate     Accuracy
+--------------- ----------
+0.0001               82.61%
+0.001                91.53%
+0.01                 93.32%
+0.1                  93.27%
+Learning rate impact plot saved as 'learning_rate_impact_full.png'
+Using device: cuda
+Loading training data...
+Loading test data...
+Loading pre-trained model from full_model_lr0.01.pth
+Accuracy of digit 0: 98.33% (353/359)
+Accuracy of digit 1: 97.73% (258/264)
+Accuracy of digit 2: 93.43% (185/198)
+Accuracy of digit 3: 89.76% (149/166)
+Accuracy of digit 4: 90.00% (180/200)
+Accuracy of digit 5: 90.00% (144/160)
+Accuracy of digit 6: 94.12% (160/170)
+Accuracy of digit 7: 94.56% (139/147)
+Accuracy of digit 8: 84.94% (141/166)
+Accuracy of digit 9: 92.66% (164/177)
+Overall Test Accuracy: 93.32% (1873/2007)
+
+Experiment complete. Final accuracy: 93.32%

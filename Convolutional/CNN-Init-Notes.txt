@@ -1,208 +1,101 @@
 ================================================================================
-Testing initialization: Too Small Init
+Testing initialization: Zeros Init
 ================================================================================
 
 Using device: cuda
 Loading training data...
 Loading test data...
-Starting training with initialization: normal, gain: 0.01, learning rate: 0.001
-Epoch [1/15], Step [10/114], Loss: 2.3964
-Epoch [1/15], Step [20/114], Loss: 2.2893
-Epoch [1/15], Step [30/114], Loss: 2.2775
-Epoch [1/15], Step [40/114], Loss: 2.0815
-Epoch [1/15], Step [50/114], Loss: 1.6685
-Epoch [1/15], Step [60/114], Loss: 1.4409
-Epoch [1/15], Step [70/114], Loss: 0.9919
-Epoch [1/15], Step [80/114], Loss: 0.6438
-Epoch [1/15], Step [90/114], Loss: 0.6362
-Epoch [1/15], Step [100/114], Loss: 0.4769
-Epoch [1/15], Step [110/114], Loss: 0.3561
-Epoch [1/15], Loss: 1.4388, Train Acc: 52.83%, Test Acc: 86.10%
-Epoch [2/15], Step [10/114], Loss: 0.4470
-Epoch [2/15], Step [20/114], Loss: 0.2326
-Epoch [2/15], Step [30/114], Loss: 0.3527
-Epoch [2/15], Step [40/114], Loss: 0.2597
-Epoch [2/15], Step [50/114], Loss: 0.2970
-Epoch [2/15], Step [60/114], Loss: 0.3181
-Epoch [2/15], Step [70/114], Loss: 0.2423
-Epoch [2/15], Step [80/114], Loss: 0.1401
-Epoch [2/15], Step [90/114], Loss: 0.1576
-Epoch [2/15], Step [100/114], Loss: 0.1049
-Epoch [2/15], Step [110/114], Loss: 0.1268
-Epoch [2/15], Loss: 0.2629, Train Acc: 93.14%, Test Acc: 92.33%
-Epoch [3/15], Step [10/114], Loss: 0.1827
-Epoch [3/15], Step [20/114], Loss: 0.1855
-Epoch [3/15], Step [30/114], Loss: 0.1566
-Epoch [3/15], Step [40/114], Loss: 0.1188
-Epoch [3/15], Step [50/114], Loss: 0.0905
-Epoch [3/15], Step [60/114], Loss: 0.2348
-Epoch [3/15], Step [70/114], Loss: 0.0985
-Epoch [3/15], Step [80/114], Loss: 0.1692
-Epoch [3/15], Step [90/114], Loss: 0.1840
-Epoch [3/15], Step [100/114], Loss: 0.0948
-Epoch [3/15], Step [110/114], Loss: 0.1052
-Epoch [3/15], Loss: 0.1520, Train Acc: 96.19%, Test Acc: 93.72%
-Epoch [4/15], Step [10/114], Loss: 0.1258
-Epoch [4/15], Step [20/114], Loss: 0.1726
-Epoch [4/15], Step [30/114], Loss: 0.1044
-Epoch [4/15], Step [40/114], Loss: 0.1041
-Epoch [4/15], Step [50/114], Loss: 0.1128
-Epoch [4/15], Step [60/114], Loss: 0.0704
-Epoch [4/15], Step [70/114], Loss: 0.0662
-Epoch [4/15], Step [80/114], Loss: 0.0865
-Epoch [4/15], Step [90/114], Loss: 0.0502
-Epoch [4/15], Step [100/114], Loss: 0.0523
-Epoch [4/15], Step [110/114], Loss: 0.0515
-Epoch [4/15], Loss: 0.1096, Train Acc: 97.24%, Test Acc: 94.52%
-Epoch [5/15], Step [10/114], Loss: 0.1118
-Epoch [5/15], Step [20/114], Loss: 0.0864
-Epoch [5/15], Step [30/114], Loss: 0.0872
-Epoch [5/15], Step [40/114], Loss: 0.1159
-Epoch [5/15], Step [50/114], Loss: 0.0454
-Epoch [5/15], Step [60/114], Loss: 0.0869
-Epoch [5/15], Step [70/114], Loss: 0.0634
-Epoch [5/15], Step [80/114], Loss: 0.0534
-Epoch [5/15], Step [90/114], Loss: 0.1013
-Epoch [5/15], Step [100/114], Loss: 0.0706
-Epoch [5/15], Step [110/114], Loss: 0.0475
-Epoch [5/15], Loss: 0.0848, Train Acc: 97.83%, Test Acc: 94.47%
-Epoch [6/15], Step [10/114], Loss: 0.1528
-Epoch [6/15], Step [20/114], Loss: 0.0788
-Epoch [6/15], Step [30/114], Loss: 0.1554
-Epoch [6/15], Step [40/114], Loss: 0.0606
-Epoch [6/15], Step [50/114], Loss: 0.0982
-Epoch [6/15], Step [60/114], Loss: 0.1061
-Epoch [6/15], Step [70/114], Loss: 0.0700
-Epoch [6/15], Step [80/114], Loss: 0.0245
-Epoch [6/15], Step [90/114], Loss: 0.0215
-Epoch [6/15], Step [100/114], Loss: 0.0477
-Epoch [6/15], Step [110/114], Loss: 0.0495
-Epoch [6/15], Loss: 0.0691, Train Acc: 98.33%, Test Acc: 95.12%
-Epoch [7/15], Step [10/114], Loss: 0.1095
-Epoch [7/15], Step [20/114], Loss: 0.0384
-Epoch [7/15], Step [30/114], Loss: 0.0349
-Epoch [7/15], Step [40/114], Loss: 0.0730
-Epoch [7/15], Step [50/114], Loss: 0.0536
-Epoch [7/15], Step [60/114], Loss: 0.0308
-Epoch [7/15], Step [70/114], Loss: 0.0869
-Epoch [7/15], Step [80/114], Loss: 0.0398
-Epoch [7/15], Step [90/114], Loss: 0.0466
-Epoch [7/15], Step [100/114], Loss: 0.0803
-Epoch [7/15], Step [110/114], Loss: 0.0672
-Epoch [7/15], Loss: 0.0565, Train Acc: 98.63%, Test Acc: 95.12%
-Epoch [8/15], Step [10/114], Loss: 0.0376
-Epoch [8/15], Step [20/114], Loss: 0.0493
-Epoch [8/15], Step [30/114], Loss: 0.0302
-Epoch [8/15], Step [40/114], Loss: 0.0655
-Epoch [8/15], Step [50/114], Loss: 0.0305
-Epoch [8/15], Step [60/114], Loss: 0.0491
-Epoch [8/15], Step [70/114], Loss: 0.0673
-Epoch [8/15], Step [80/114], Loss: 0.0762
-Epoch [8/15], Step [90/114], Loss: 0.0538
-Epoch [8/15], Step [100/114], Loss: 0.0305
-Epoch [8/15], Step [110/114], Loss: 0.0826
-Epoch [8/15], Loss: 0.0490, Train Acc: 98.86%, Test Acc: 95.52%
-Epoch [9/15], Step [10/114], Loss: 0.0294
-Epoch [9/15], Step [20/114], Loss: 0.0189
-Epoch [9/15], Step [30/114], Loss: 0.0211
-Epoch [9/15], Step [40/114], Loss: 0.0179
-Epoch [9/15], Step [50/114], Loss: 0.0491
-Epoch [9/15], Step [60/114], Loss: 0.0098
-Epoch [9/15], Step [70/114], Loss: 0.0201
-Epoch [9/15], Step [80/114], Loss: 0.0130
-Epoch [9/15], Step [90/114], Loss: 0.0305
-Epoch [9/15], Step [100/114], Loss: 0.0176
-Epoch [9/15], Step [110/114], Loss: 0.0133
-Epoch [9/15], Loss: 0.0409, Train Acc: 99.12%, Test Acc: 95.47%
-Epoch [10/15], Step [10/114], Loss: 0.0400
-Epoch [10/15], Step [20/114], Loss: 0.0115
-Epoch [10/15], Step [30/114], Loss: 0.0126
-Epoch [10/15], Step [40/114], Loss: 0.0150
-Epoch [10/15], Step [50/114], Loss: 0.0054
-Epoch [10/15], Step [60/114], Loss: 0.0350
-Epoch [10/15], Step [70/114], Loss: 0.0376
-Epoch [10/15], Step [80/114], Loss: 0.0196
-Epoch [10/15], Step [90/114], Loss: 0.1064
-Epoch [10/15], Step [100/114], Loss: 0.0306
-Epoch [10/15], Step [110/114], Loss: 0.0353
-Epoch [10/15], Loss: 0.0358, Train Acc: 99.23%, Test Acc: 95.67%
-Epoch [11/15], Step [10/114], Loss: 0.0406
-Epoch [11/15], Step [20/114], Loss: 0.0230
-Epoch [11/15], Step [30/114], Loss: 0.0094
-Epoch [11/15], Step [40/114], Loss: 0.0292
-Epoch [11/15], Step [50/114], Loss: 0.0164
-Epoch [11/15], Step [60/114], Loss: 0.0109
-Epoch [11/15], Step [70/114], Loss: 0.0239
-Epoch [11/15], Step [80/114], Loss: 0.0585
-Epoch [11/15], Step [90/114], Loss: 0.0469
-Epoch [11/15], Step [100/114], Loss: 0.0475
-Epoch [11/15], Step [110/114], Loss: 0.0349
-Epoch [11/15], Loss: 0.0317, Train Acc: 99.31%, Test Acc: 95.76%
-Epoch [12/15], Step [10/114], Loss: 0.0852
-Epoch [12/15], Step [20/114], Loss: 0.0427
-Epoch [12/15], Step [30/114], Loss: 0.0219
-Epoch [12/15], Step [40/114], Loss: 0.0222
-Epoch [12/15], Step [50/114], Loss: 0.0091
-Epoch [12/15], Step [60/114], Loss: 0.0586
-Epoch [12/15], Step [70/114], Loss: 0.0108
-Epoch [12/15], Step [80/114], Loss: 0.0194
-Epoch [12/15], Step [90/114], Loss: 0.0213
-Epoch [12/15], Step [100/114], Loss: 0.0139
-Epoch [12/15], Step [110/114], Loss: 0.0215
-Epoch [12/15], Loss: 0.0279, Train Acc: 99.44%, Test Acc: 95.71%
-Epoch [13/15], Step [10/114], Loss: 0.0301
-Epoch [13/15], Step [20/114], Loss: 0.0226
-Epoch [13/15], Step [30/114], Loss: 0.0207
-Epoch [13/15], Step [40/114], Loss: 0.0099
-Epoch [13/15], Step [50/114], Loss: 0.0153
-Epoch [13/15], Step [60/114], Loss: 0.0317
-Epoch [13/15], Step [70/114], Loss: 0.0230
-Epoch [13/15], Step [80/114], Loss: 0.0077
-Epoch [13/15], Step [90/114], Loss: 0.0168
-Epoch [13/15], Step [100/114], Loss: 0.0174
-Epoch [13/15], Step [110/114], Loss: 0.0099
-Epoch [13/15], Loss: 0.0237, Train Acc: 99.59%, Test Acc: 96.01%
-Epoch [14/15], Step [10/114], Loss: 0.0117
-Epoch [14/15], Step [20/114], Loss: 0.0215
-Epoch [14/15], Step [30/114], Loss: 0.0085
-Epoch [14/15], Step [40/114], Loss: 0.0218
-Epoch [14/15], Step [50/114], Loss: 0.0210
-Epoch [14/15], Step [60/114], Loss: 0.0152
-Epoch [14/15], Step [70/114], Loss: 0.0180
-Epoch [14/15], Step [80/114], Loss: 0.0269
-Epoch [14/15], Step [90/114], Loss: 0.0203
-Epoch [14/15], Step [100/114], Loss: 0.0053
-Epoch [14/15], Step [110/114], Loss: 0.0094
-Epoch [14/15], Loss: 0.0209, Train Acc: 99.70%, Test Acc: 95.76%
-Epoch [15/15], Step [10/114], Loss: 0.0147
-Epoch [15/15], Step [20/114], Loss: 0.0167
-Epoch [15/15], Step [30/114], Loss: 0.0332
-Epoch [15/15], Step [40/114], Loss: 0.0191
-Epoch [15/15], Step [50/114], Loss: 0.0140
-Epoch [15/15], Step [60/114], Loss: 0.0957
-Epoch [15/15], Step [70/114], Loss: 0.0131
-Epoch [15/15], Step [80/114], Loss: 0.0114
-Epoch [15/15], Step [90/114], Loss: 0.0121
-Epoch [15/15], Step [100/114], Loss: 0.0123
-Epoch [15/15], Step [110/114], Loss: 0.0079
-Epoch [15/15], Loss: 0.0186, Train Acc: 99.71%, Test Acc: 95.76%
-Training completed in 4.63 seconds
+Starting training with initialization: zeros, gain: 1.0, learning rate: 0.001
+Epoch [1/15], Step [10/114], Loss: 2.3059
+Epoch [1/15], Step [20/114], Loss: 2.3475
+Epoch [1/15], Step [30/114], Loss: 2.3699
+Epoch [1/15], Step [40/114], Loss: 2.2083
+Epoch [1/15], Step [50/114], Loss: 2.2698
+Epoch [1/15], Step [60/114], Loss: 2.3661
+Epoch [1/15], Step [70/114], Loss: 2.2762
+Epoch [1/15], Step [80/114], Loss: 2.2898
+Epoch [1/15], Step [90/114], Loss: 2.2929
+Epoch [1/15], Step [100/114], Loss: 2.3006
+Epoch [1/15], Step [110/114], Loss: 2.2777
+Epoch [1/15], Loss: 2.3081, Train Acc: 15.17%, Test Acc: 17.89%
+Epoch [2/15], Step [10/114], Loss: 2.2861
+Epoch [2/15], Step [20/114], Loss: 2.3139
+Epoch [2/15], Step [30/114], Loss: 2.2634
+Epoch [2/15], Step [40/114], Loss: 2.2580
+Epoch [2/15], Step [50/114], Loss: 2.2579
+Epoch [2/15], Step [60/114], Loss: 2.2718
+Epoch [2/15], Step [70/114], Loss: 2.2853
+Epoch [2/15], Step [80/114], Loss: 2.3343
+Epoch [2/15], Step [90/114], Loss: 2.3343
+Epoch [2/15], Step [100/114], Loss: 2.3056
+Epoch [2/15], Step [110/114], Loss: 2.4411
+Epoch [2/15], Loss: 2.3093, Train Acc: 14.70%, Test Acc: 17.89%
+Epoch [3/15], Step [10/114], Loss: 2.2564
+Epoch [3/15], Step [20/114], Loss: 2.2877
+Epoch [3/15], Step [30/114], Loss: 2.2789
+Epoch [3/15], Step [40/114], Loss: 2.2627
+Epoch [3/15], Step [50/114], Loss: 2.2745
+Epoch [3/15], Step [60/114], Loss: 2.3006
+Epoch [3/15], Step [70/114], Loss: 2.3407
+Epoch [3/15], Step [80/114], Loss: 2.2656
+Epoch [3/15], Step [90/114], Loss: 2.2573
+Epoch [3/15], Step [100/114], Loss: 2.3252
+Epoch [3/15], Step [110/114], Loss: 2.2473
+Epoch [3/15], Loss: 2.3089, Train Acc: 14.92%, Test Acc: 17.89%
+Epoch [4/15], Step [10/114], Loss: 2.2752
+Epoch [4/15], Step [20/114], Loss: 2.2749
+Epoch [4/15], Step [30/114], Loss: 2.3309
+Epoch [4/15], Step [40/114], Loss: 2.2942
+Epoch [4/15], Step [50/114], Loss: 2.2225
+Epoch [4/15], Step [60/114], Loss: 2.3723
+Epoch [4/15], Step [70/114], Loss: 2.3262
+Epoch [4/15], Step [80/114], Loss: 2.3917
+Epoch [4/15], Step [90/114], Loss: 2.2607
+Epoch [4/15], Step [100/114], Loss: 2.2906
+Epoch [4/15], Step [110/114], Loss: 2.2745
+Epoch [4/15], Loss: 2.2978, Train Acc: 15.00%, Test Acc: 13.15%
+Epoch [5/15], Step [10/114], Loss: 2.3268
+Epoch [5/15], Step [20/114], Loss: 2.3206
+Epoch [5/15], Step [30/114], Loss: 2.2541
+Epoch [5/15], Step [40/114], Loss: 2.2946
+Epoch [5/15], Step [50/114], Loss: 2.3650
+Epoch [5/15], Step [60/114], Loss: 2.2999
+Epoch [5/15], Step [70/114], Loss: 2.2518
+Epoch [5/15], Step [80/114], Loss: 2.2816
+Epoch [5/15], Step [90/114], Loss: 2.3817
+Epoch [5/15], Step [100/114], Loss: 2.2349
+Epoch [5/15], Step [110/114], Loss: 2.2855
+Epoch [5/15], Loss: 2.3001, Train Acc: 14.43%, Test Acc: 13.15%
+Epoch [6/15], Step [10/114], Loss: 2.3285
+Epoch [6/15], Step [20/114], Loss: 2.3119
+Epoch [6/15], Step [30/114], Loss: 2.3081
+Epoch [6/15], Step [40/114], Loss: 2.3836
+Epoch [6/15], Step [50/114], Loss: 2.3564
+Epoch [6/15], Step [60/114], Loss: 2.2775
+Epoch [6/15], Step [70/114], Loss: 2.2583
+Epoch [6/15], Step [80/114], Loss: 2.3335
+Epoch [6/15], Step [90/114], Loss: 2.2975
+Epoch [6/15], Step [100/114], Loss: 2.3205
+Epoch [6/15], Step [110/114], Loss: 2.2859
+Epoch [6/15], Loss: 2.3024, Train Acc: 14.79%, Test Acc: 17.89%
+Early stopping after 6 epochs
+Training completed in 1.73 seconds
 Training curves saved
-Accuracy of digit 0: 98.33% (353/359)
-Accuracy of digit 1: 97.35% (257/264)
-Accuracy of digit 2: 95.45% (189/198)
-Accuracy of digit 3: 92.17% (153/166)
-Accuracy of digit 4: 94.00% (188/200)
-Accuracy of digit 5: 95.00% (152/160)
-Accuracy of digit 6: 97.65% (166/170)
-Accuracy of digit 7: 95.92% (141/147)
-Accuracy of digit 8: 93.37% (155/166)
-Accuracy of digit 9: 97.74% (173/177)
-Overall Test Accuracy: 96.01% (1927/2007)
+Accuracy of digit 0: 100.00% (359/359)
+Accuracy of digit 1: 0.00% (0/264)
+Accuracy of digit 2: 0.00% (0/198)
+Accuracy of digit 3: 0.00% (0/166)
+Accuracy of digit 4: 0.00% (0/200)
+Accuracy of digit 5: 0.00% (0/160)
+Accuracy of digit 6: 0.00% (0/170)
+Accuracy of digit 7: 0.00% (0/147)
+Accuracy of digit 8: 0.00% (0/166)
+Accuracy of digit 9: 0.00% (0/177)
+Overall Test Accuracy: 17.89% (359/2007)
 
 
 ================================================================================
-Testing initialization: Effective Init
+Testing initialization: Kaiming Normal Init
 ================================================================================
 
 Using device: cuda
@@ -211,185 +104,185 @@ Loading test data...
 Starting training with initialization: kaiming_normal, gain: 1.0, learning rate: 0.001
 Epoch [1/15], Step [10/114], Loss: 2.2133
 Epoch [1/15], Step [20/114], Loss: 1.6523
-Epoch [1/15], Step [30/114], Loss: 1.3682
+Epoch [1/15], Step [30/114], Loss: 1.3681
 Epoch [1/15], Step [40/114], Loss: 0.9740
-Epoch [1/15], Step [50/114], Loss: 0.7357
+Epoch [1/15], Step [50/114], Loss: 0.7358
 Epoch [1/15], Step [60/114], Loss: 0.6747
 Epoch [1/15], Step [70/114], Loss: 0.5172
 Epoch [1/15], Step [80/114], Loss: 0.3918
 Epoch [1/15], Step [90/114], Loss: 0.4552
 Epoch [1/15], Step [100/114], Loss: 0.3642
-Epoch [1/15], Step [110/114], Loss: 0.3041
-Epoch [1/15], Loss: 0.9450, Train Acc: 76.18%, Test Acc: 89.84%
-Epoch [2/15], Step [10/114], Loss: 0.3555
+Epoch [1/15], Step [110/114], Loss: 0.3042
+Epoch [1/15], Loss: 0.9450, Train Acc: 76.19%, Test Acc: 89.84%
+Epoch [2/15], Step [10/114], Loss: 0.3557
 Epoch [2/15], Step [20/114], Loss: 0.1920
 Epoch [2/15], Step [30/114], Loss: 0.3055
 Epoch [2/15], Step [40/114], Loss: 0.2280
-Epoch [2/15], Step [50/114], Loss: 0.2801
-Epoch [2/15], Step [60/114], Loss: 0.2870
-Epoch [2/15], Step [70/114], Loss: 0.2304
-Epoch [2/15], Step [80/114], Loss: 0.1104
-Epoch [2/15], Step [90/114], Loss: 0.1396
+Epoch [2/15], Step [50/114], Loss: 0.2802
+Epoch [2/15], Step [60/114], Loss: 0.2871
+Epoch [2/15], Step [70/114], Loss: 0.2303
+Epoch [2/15], Step [80/114], Loss: 0.1105
+Epoch [2/15], Step [90/114], Loss: 0.1395
 Epoch [2/15], Step [100/114], Loss: 0.1062
-Epoch [2/15], Step [110/114], Loss: 0.1264
-Epoch [2/15], Loss: 0.2349, Train Acc: 94.29%, Test Acc: 92.63%
-Epoch [3/15], Step [10/114], Loss: 0.1764
-Epoch [3/15], Step [20/114], Loss: 0.1617
-Epoch [3/15], Step [30/114], Loss: 0.1455
-Epoch [3/15], Step [40/114], Loss: 0.0883
-Epoch [3/15], Step [50/114], Loss: 0.0860
-Epoch [3/15], Step [60/114], Loss: 0.2238
+Epoch [2/15], Step [110/114], Loss: 0.1265
+Epoch [2/15], Loss: 0.2349, Train Acc: 94.31%, Test Acc: 92.63%
+Epoch [3/15], Step [10/114], Loss: 0.1761
+Epoch [3/15], Step [20/114], Loss: 0.1616
+Epoch [3/15], Step [30/114], Loss: 0.1456
+Epoch [3/15], Step [40/114], Loss: 0.0884
+Epoch [3/15], Step [50/114], Loss: 0.0859
+Epoch [3/15], Step [60/114], Loss: 0.2239
 Epoch [3/15], Step [70/114], Loss: 0.1055
-Epoch [3/15], Step [80/114], Loss: 0.1812
+Epoch [3/15], Step [80/114], Loss: 0.1811
 Epoch [3/15], Step [90/114], Loss: 0.1899
-Epoch [3/15], Step [100/114], Loss: 0.0827
-Epoch [3/15], Step [110/114], Loss: 0.1183
+Epoch [3/15], Step [100/114], Loss: 0.0828
+Epoch [3/15], Step [110/114], Loss: 0.1182
 Epoch [3/15], Loss: 0.1466, Train Acc: 96.50%, Test Acc: 93.52%
-Epoch [4/15], Step [10/114], Loss: 0.1138
-Epoch [4/15], Step [20/114], Loss: 0.1641
-Epoch [4/15], Step [30/114], Loss: 0.1146
-Epoch [4/15], Step [40/114], Loss: 0.1001
+Epoch [4/15], Step [10/114], Loss: 0.1139
+Epoch [4/15], Step [20/114], Loss: 0.1640
+Epoch [4/15], Step [30/114], Loss: 0.1145
+Epoch [4/15], Step [40/114], Loss: 0.1002
 Epoch [4/15], Step [50/114], Loss: 0.1077
-Epoch [4/15], Step [60/114], Loss: 0.0788
-Epoch [4/15], Step [70/114], Loss: 0.0739
+Epoch [4/15], Step [60/114], Loss: 0.0790
+Epoch [4/15], Step [70/114], Loss: 0.0740
 Epoch [4/15], Step [80/114], Loss: 0.0876
 Epoch [4/15], Step [90/114], Loss: 0.0553
-Epoch [4/15], Step [100/114], Loss: 0.0555
-Epoch [4/15], Step [110/114], Loss: 0.0609
-Epoch [4/15], Loss: 0.1064, Train Acc: 97.42%, Test Acc: 94.42%
-Epoch [5/15], Step [10/114], Loss: 0.0970
-Epoch [5/15], Step [20/114], Loss: 0.0875
-Epoch [5/15], Step [30/114], Loss: 0.0755
+Epoch [4/15], Step [100/114], Loss: 0.0556
+Epoch [4/15], Step [110/114], Loss: 0.0610
+Epoch [4/15], Loss: 0.1064, Train Acc: 97.41%, Test Acc: 94.42%
+Epoch [5/15], Step [10/114], Loss: 0.0972
+Epoch [5/15], Step [20/114], Loss: 0.0877
+Epoch [5/15], Step [30/114], Loss: 0.0753
 Epoch [5/15], Step [40/114], Loss: 0.1193
 Epoch [5/15], Step [50/114], Loss: 0.0492
-Epoch [5/15], Step [60/114], Loss: 0.0869
-Epoch [5/15], Step [70/114], Loss: 0.0638
-Epoch [5/15], Step [80/114], Loss: 0.0473
-Epoch [5/15], Step [90/114], Loss: 0.1072
+Epoch [5/15], Step [60/114], Loss: 0.0870
+Epoch [5/15], Step [70/114], Loss: 0.0639
+Epoch [5/15], Step [80/114], Loss: 0.0474
+Epoch [5/15], Step [90/114], Loss: 0.1074
 Epoch [5/15], Step [100/114], Loss: 0.0546
-Epoch [5/15], Step [110/114], Loss: 0.0478
-Epoch [5/15], Loss: 0.0817, Train Acc: 98.16%, Test Acc: 94.82%
-Epoch [6/15], Step [10/114], Loss: 0.1327
-Epoch [6/15], Step [20/114], Loss: 0.0709
+Epoch [5/15], Step [110/114], Loss: 0.0479
+Epoch [5/15], Loss: 0.0817, Train Acc: 98.15%, Test Acc: 94.87%
+Epoch [6/15], Step [10/114], Loss: 0.1329
+Epoch [6/15], Step [20/114], Loss: 0.0708
 Epoch [6/15], Step [30/114], Loss: 0.1277
-Epoch [6/15], Step [40/114], Loss: 0.0607
-Epoch [6/15], Step [50/114], Loss: 0.0962
+Epoch [6/15], Step [40/114], Loss: 0.0609
+Epoch [6/15], Step [50/114], Loss: 0.0961
 Epoch [6/15], Step [60/114], Loss: 0.0961
-Epoch [6/15], Step [70/114], Loss: 0.0729
+Epoch [6/15], Step [70/114], Loss: 0.0728
 Epoch [6/15], Step [80/114], Loss: 0.0207
 Epoch [6/15], Step [90/114], Loss: 0.0207
-Epoch [6/15], Step [100/114], Loss: 0.0435
-Epoch [6/15], Step [110/114], Loss: 0.0460
-Epoch [6/15], Loss: 0.0658, Train Acc: 98.40%, Test Acc: 95.22%
-Epoch [7/15], Step [10/114], Loss: 0.1210
+Epoch [6/15], Step [100/114], Loss: 0.0434
+Epoch [6/15], Step [110/114], Loss: 0.0461
+Epoch [6/15], Loss: 0.0658, Train Acc: 98.41%, Test Acc: 95.22%
+Epoch [7/15], Step [10/114], Loss: 0.1211
 Epoch [7/15], Step [20/114], Loss: 0.0388
-Epoch [7/15], Step [30/114], Loss: 0.0330
-Epoch [7/15], Step [40/114], Loss: 0.0647
-Epoch [7/15], Step [50/114], Loss: 0.0600
+Epoch [7/15], Step [30/114], Loss: 0.0331
+Epoch [7/15], Step [40/114], Loss: 0.0646
+Epoch [7/15], Step [50/114], Loss: 0.0599
 Epoch [7/15], Step [60/114], Loss: 0.0324
-Epoch [7/15], Step [70/114], Loss: 0.0849
+Epoch [7/15], Step [70/114], Loss: 0.0848
 Epoch [7/15], Step [80/114], Loss: 0.0437
-Epoch [7/15], Step [90/114], Loss: 0.0611
-Epoch [7/15], Step [100/114], Loss: 0.0520
+Epoch [7/15], Step [90/114], Loss: 0.0612
+Epoch [7/15], Step [100/114], Loss: 0.0518
 Epoch [7/15], Step [110/114], Loss: 0.0554
-Epoch [7/15], Loss: 0.0529, Train Acc: 98.83%, Test Acc: 95.27%
-Epoch [8/15], Step [10/114], Loss: 0.0306
+Epoch [7/15], Loss: 0.0529, Train Acc: 98.86%, Test Acc: 95.27%
+Epoch [8/15], Step [10/114], Loss: 0.0305
 Epoch [8/15], Step [20/114], Loss: 0.0399
-Epoch [8/15], Step [30/114], Loss: 0.0396
-Epoch [8/15], Step [40/114], Loss: 0.0541
+Epoch [8/15], Step [30/114], Loss: 0.0397
+Epoch [8/15], Step [40/114], Loss: 0.0540
 Epoch [8/15], Step [50/114], Loss: 0.0250
-Epoch [8/15], Step [60/114], Loss: 0.0438
-Epoch [8/15], Step [70/114], Loss: 0.0499
-Epoch [8/15], Step [80/114], Loss: 0.0743
-Epoch [8/15], Step [90/114], Loss: 0.0454
-Epoch [8/15], Step [100/114], Loss: 0.0325
-Epoch [8/15], Step [110/114], Loss: 0.0654
-Epoch [8/15], Loss: 0.0457, Train Acc: 99.03%, Test Acc: 95.57%
-Epoch [9/15], Step [10/114], Loss: 0.0372
-Epoch [9/15], Step [20/114], Loss: 0.0191
+Epoch [8/15], Step [60/114], Loss: 0.0439
+Epoch [8/15], Step [70/114], Loss: 0.0497
+Epoch [8/15], Step [80/114], Loss: 0.0746
+Epoch [8/15], Step [90/114], Loss: 0.0453
+Epoch [8/15], Step [100/114], Loss: 0.0323
+Epoch [8/15], Step [110/114], Loss: 0.0652
+Epoch [8/15], Loss: 0.0457, Train Acc: 99.04%, Test Acc: 95.57%
+Epoch [9/15], Step [10/114], Loss: 0.0371
+Epoch [9/15], Step [20/114], Loss: 0.0190
 Epoch [9/15], Step [30/114], Loss: 0.0201
-Epoch [9/15], Step [40/114], Loss: 0.0134
-Epoch [9/15], Step [50/114], Loss: 0.0438
+Epoch [9/15], Step [40/114], Loss: 0.0133
+Epoch [9/15], Step [50/114], Loss: 0.0436
 Epoch [9/15], Step [60/114], Loss: 0.0122
 Epoch [9/15], Step [70/114], Loss: 0.0156
 Epoch [9/15], Step [80/114], Loss: 0.0128
-Epoch [9/15], Step [90/114], Loss: 0.0402
-Epoch [9/15], Step [100/114], Loss: 0.0142
-Epoch [9/15], Step [110/114], Loss: 0.0192
+Epoch [9/15], Step [90/114], Loss: 0.0401
+Epoch [9/15], Step [100/114], Loss: 0.0141
+Epoch [9/15], Step [110/114], Loss: 0.0194
 Epoch [9/15], Loss: 0.0378, Train Acc: 99.23%, Test Acc: 95.42%
-Epoch [10/15], Step [10/114], Loss: 0.0356
+Epoch [10/15], Step [10/114], Loss: 0.0355
 Epoch [10/15], Step [20/114], Loss: 0.0098
 Epoch [10/15], Step [30/114], Loss: 0.0100
-Epoch [10/15], Step [40/114], Loss: 0.0125
+Epoch [10/15], Step [40/114], Loss: 0.0126
 Epoch [10/15], Step [50/114], Loss: 0.0045
-Epoch [10/15], Step [60/114], Loss: 0.0361
-Epoch [10/15], Step [70/114], Loss: 0.0345
+Epoch [10/15], Step [60/114], Loss: 0.0362
+Epoch [10/15], Step [70/114], Loss: 0.0348
 Epoch [10/15], Step [80/114], Loss: 0.0165
-Epoch [10/15], Step [90/114], Loss: 0.0849
-Epoch [10/15], Step [100/114], Loss: 0.0321
+Epoch [10/15], Step [90/114], Loss: 0.0851
+Epoch [10/15], Step [100/114], Loss: 0.0320
 Epoch [10/15], Step [110/114], Loss: 0.0293
 Epoch [10/15], Loss: 0.0324, Train Acc: 99.34%, Test Acc: 95.86%
-Epoch [11/15], Step [10/114], Loss: 0.0327
-Epoch [11/15], Step [20/114], Loss: 0.0222
+Epoch [11/15], Step [10/114], Loss: 0.0326
+Epoch [11/15], Step [20/114], Loss: 0.0223
 Epoch [11/15], Step [30/114], Loss: 0.0079
 Epoch [11/15], Step [40/114], Loss: 0.0213
 Epoch [11/15], Step [50/114], Loss: 0.0188
-Epoch [11/15], Step [60/114], Loss: 0.0117
+Epoch [11/15], Step [60/114], Loss: 0.0118
 Epoch [11/15], Step [70/114], Loss: 0.0172
-Epoch [11/15], Step [80/114], Loss: 0.0480
-Epoch [11/15], Step [90/114], Loss: 0.0385
-Epoch [11/15], Step [100/114], Loss: 0.0480
-Epoch [11/15], Step [110/114], Loss: 0.0234
-Epoch [11/15], Loss: 0.0279, Train Acc: 99.38%, Test Acc: 95.71%
+Epoch [11/15], Step [80/114], Loss: 0.0481
+Epoch [11/15], Step [90/114], Loss: 0.0383
+Epoch [11/15], Step [100/114], Loss: 0.0479
+Epoch [11/15], Step [110/114], Loss: 0.0232
+Epoch [11/15], Loss: 0.0279, Train Acc: 99.40%, Test Acc: 95.76%
 Epoch [12/15], Step [10/114], Loss: 0.0750
-Epoch [12/15], Step [20/114], Loss: 0.0385
+Epoch [12/15], Step [20/114], Loss: 0.0384
 Epoch [12/15], Step [30/114], Loss: 0.0164
-Epoch [12/15], Step [40/114], Loss: 0.0235
-Epoch [12/15], Step [50/114], Loss: 0.0119
-Epoch [12/15], Step [60/114], Loss: 0.0349
+Epoch [12/15], Step [40/114], Loss: 0.0236
+Epoch [12/15], Step [50/114], Loss: 0.0120
+Epoch [12/15], Step [60/114], Loss: 0.0345
 Epoch [12/15], Step [70/114], Loss: 0.0096
-Epoch [12/15], Step [80/114], Loss: 0.0168
+Epoch [12/15], Step [80/114], Loss: 0.0166
 Epoch [12/15], Step [90/114], Loss: 0.0197
-Epoch [12/15], Step [100/114], Loss: 0.0124
-Epoch [12/15], Step [110/114], Loss: 0.0141
+Epoch [12/15], Step [100/114], Loss: 0.0123
+Epoch [12/15], Step [110/114], Loss: 0.0140
 Epoch [12/15], Loss: 0.0244, Train Acc: 99.53%, Test Acc: 95.86%
 Epoch [13/15], Step [10/114], Loss: 0.0339
-Epoch [13/15], Step [20/114], Loss: 0.0181
-Epoch [13/15], Step [30/114], Loss: 0.0213
+Epoch [13/15], Step [20/114], Loss: 0.0182
+Epoch [13/15], Step [30/114], Loss: 0.0215
 Epoch [13/15], Step [40/114], Loss: 0.0101
 Epoch [13/15], Step [50/114], Loss: 0.0155
-Epoch [13/15], Step [60/114], Loss: 0.0264
-Epoch [13/15], Step [70/114], Loss: 0.0172
+Epoch [13/15], Step [60/114], Loss: 0.0266
+Epoch [13/15], Step [70/114], Loss: 0.0173
 Epoch [13/15], Step [80/114], Loss: 0.0049
-Epoch [13/15], Step [90/114], Loss: 0.0239
-Epoch [13/15], Step [100/114], Loss: 0.0187
+Epoch [13/15], Step [90/114], Loss: 0.0238
+Epoch [13/15], Step [100/114], Loss: 0.0188
 Epoch [13/15], Step [110/114], Loss: 0.0078
-Epoch [13/15], Loss: 0.0208, Train Acc: 99.70%, Test Acc: 96.11%
+Epoch [13/15], Loss: 0.0208, Train Acc: 99.70%, Test Acc: 96.06%
 Epoch [14/15], Step [10/114], Loss: 0.0116
-Epoch [14/15], Step [20/114], Loss: 0.0215
-Epoch [14/15], Step [30/114], Loss: 0.0080
-Epoch [14/15], Step [40/114], Loss: 0.0171
-Epoch [14/15], Step [50/114], Loss: 0.0144
-Epoch [14/15], Step [60/114], Loss: 0.0127
-Epoch [14/15], Step [70/114], Loss: 0.0111
-Epoch [14/15], Step [80/114], Loss: 0.0145
-Epoch [14/15], Step [90/114], Loss: 0.0168
+Epoch [14/15], Step [20/114], Loss: 0.0216
+Epoch [14/15], Step [30/114], Loss: 0.0081
+Epoch [14/15], Step [40/114], Loss: 0.0172
+Epoch [14/15], Step [50/114], Loss: 0.0145
+Epoch [14/15], Step [60/114], Loss: 0.0128
+Epoch [14/15], Step [70/114], Loss: 0.0110
+Epoch [14/15], Step [80/114], Loss: 0.0144
+Epoch [14/15], Step [90/114], Loss: 0.0167
 Epoch [14/15], Step [100/114], Loss: 0.0057
 Epoch [14/15], Step [110/114], Loss: 0.0083
 Epoch [14/15], Loss: 0.0182, Train Acc: 99.77%, Test Acc: 95.86%
-Epoch [15/15], Step [10/114], Loss: 0.0117
+Epoch [15/15], Step [10/114], Loss: 0.0116
 Epoch [15/15], Step [20/114], Loss: 0.0138
-Epoch [15/15], Step [30/114], Loss: 0.0210
-Epoch [15/15], Step [40/114], Loss: 0.0300
+Epoch [15/15], Step [30/114], Loss: 0.0212
+Epoch [15/15], Step [40/114], Loss: 0.0302
 Epoch [15/15], Step [50/114], Loss: 0.0142
-Epoch [15/15], Step [60/114], Loss: 0.0661
+Epoch [15/15], Step [60/114], Loss: 0.0662
 Epoch [15/15], Step [70/114], Loss: 0.0106
 Epoch [15/15], Step [80/114], Loss: 0.0077
-Epoch [15/15], Step [90/114], Loss: 0.0101
-Epoch [15/15], Step [100/114], Loss: 0.0117
-Epoch [15/15], Step [110/114], Loss: 0.0083
-Epoch [15/15], Loss: 0.0162, Train Acc: 99.81%, Test Acc: 96.16%
-Training completed in 4.27 seconds
+Epoch [15/15], Step [90/114], Loss: 0.0100
+Epoch [15/15], Step [100/114], Loss: 0.0118
+Epoch [15/15], Step [110/114], Loss: 0.0082
+Epoch [15/15], Loss: 0.0162, Train Acc: 99.81%, Test Acc: 96.11%
+Training completed in 3.86 seconds
 Training curves saved
 Accuracy of digit 0: 98.61% (354/359)
 Accuracy of digit 1: 98.11% (259/264)
@@ -398,221 +291,235 @@ Accuracy of digit 3: 92.17% (153/166)
 Accuracy of digit 4: 95.00% (190/200)
 Accuracy of digit 5: 95.62% (153/160)
 Accuracy of digit 6: 97.65% (166/170)
-Accuracy of digit 7: 95.24% (140/147)
+Accuracy of digit 7: 94.56% (139/147)
 Accuracy of digit 8: 93.37% (155/166)
 Accuracy of digit 9: 97.74% (173/177)
-Overall Test Accuracy: 96.16% (1930/2007)
+Overall Test Accuracy: 96.11% (1929/2007)
 
 
 ================================================================================
-Testing initialization: Too Large Init
+Testing initialization: Uniform (Large) Init
 ================================================================================
 
 Using device: cuda
 Loading training data...
 Loading test data...
-Starting training with initialization: normal, gain: 10.0, learning rate: 0.001
-Epoch [1/15], Step [10/114], Loss: 308.8998
-Epoch [1/15], Step [20/114], Loss: 267.3366
-Epoch [1/15], Step [30/114], Loss: 274.9290
-Epoch [1/15], Step [40/114], Loss: 273.0106
-Epoch [1/15], Step [50/114], Loss: 266.3014
-Epoch [1/15], Step [60/114], Loss: 224.7543
-Epoch [1/15], Step [70/114], Loss: 299.1938
-Epoch [1/15], Step [80/114], Loss: 244.6550
-Epoch [1/15], Step [90/114], Loss: 218.1045
-Epoch [1/15], Step [100/114], Loss: 231.4920
-Epoch [1/15], Step [110/114], Loss: 274.6490
-Epoch [1/15], Loss: 265.7589, Train Acc: 7.34%, Test Acc: 8.07%
-Epoch [2/15], Step [10/114], Loss: 190.9285
-Epoch [2/15], Step [20/114], Loss: 227.1093
-Epoch [2/15], Step [30/114], Loss: 193.2010
-Epoch [2/15], Step [40/114], Loss: 194.9182
-Epoch [2/15], Step [50/114], Loss: 221.5350
-Epoch [2/15], Step [60/114], Loss: 175.3848
-Epoch [2/15], Step [70/114], Loss: 213.3734
-Epoch [2/15], Step [80/114], Loss: 192.3590
-Epoch [2/15], Step [90/114], Loss: 175.7124
-Epoch [2/15], Step [100/114], Loss: 163.4048
-Epoch [2/15], Step [110/114], Loss: 152.3745
-Epoch [2/15], Loss: 188.7027, Train Acc: 7.78%, Test Acc: 8.77%
-Epoch [3/15], Step [10/114], Loss: 178.6919
-Epoch [3/15], Step [20/114], Loss: 156.6788
-Epoch [3/15], Step [30/114], Loss: 177.1912
-Epoch [3/15], Step [40/114], Loss: 140.7532
-Epoch [3/15], Step [50/114], Loss: 146.1217
-Epoch [3/15], Step [60/114], Loss: 157.2074
-Epoch [3/15], Step [70/114], Loss: 150.4270
-Epoch [3/15], Step [80/114], Loss: 149.3671
-Epoch [3/15], Step [90/114], Loss: 132.0942
-Epoch [3/15], Step [100/114], Loss: 130.6467
-Epoch [3/15], Step [110/114], Loss: 119.9022
-Epoch [3/15], Loss: 145.5905, Train Acc: 10.07%, Test Acc: 11.26%
-Epoch [4/15], Step [10/114], Loss: 134.1159
-Epoch [4/15], Step [20/114], Loss: 132.0738
-Epoch [4/15], Step [30/114], Loss: 122.8164
-Epoch [4/15], Step [40/114], Loss: 129.6013
-Epoch [4/15], Step [50/114], Loss: 125.4464
-Epoch [4/15], Step [60/114], Loss: 101.6369
-Epoch [4/15], Step [70/114], Loss: 131.3651
-Epoch [4/15], Step [80/114], Loss: 119.3941
-Epoch [4/15], Step [90/114], Loss: 119.1040
-Epoch [4/15], Step [100/114], Loss: 135.7131
-Epoch [4/15], Step [110/114], Loss: 124.1081
-Epoch [4/15], Loss: 123.5290, Train Acc: 14.02%, Test Acc: 14.05%
-Epoch [5/15], Step [10/114], Loss: 136.2399
-Epoch [5/15], Step [20/114], Loss: 116.8557
-Epoch [5/15], Step [30/114], Loss: 100.2935
-Epoch [5/15], Step [40/114], Loss: 113.9310
-Epoch [5/15], Step [50/114], Loss: 95.9669
-Epoch [5/15], Step [60/114], Loss: 124.3017
-Epoch [5/15], Step [70/114], Loss: 123.4903
-Epoch [5/15], Step [80/114], Loss: 122.9686
-Epoch [5/15], Step [90/114], Loss: 115.1245
-Epoch [5/15], Step [100/114], Loss: 123.9829
-Epoch [5/15], Step [110/114], Loss: 98.5829
-Epoch [5/15], Loss: 113.2910, Train Acc: 17.16%, Test Acc: 15.99%
-Epoch [6/15], Step [10/114], Loss: 94.4896
-Epoch [6/15], Step [20/114], Loss: 93.8629
-Epoch [6/15], Step [30/114], Loss: 96.9022
-Epoch [6/15], Step [40/114], Loss: 108.7801
-Epoch [6/15], Step [50/114], Loss: 119.1901
-Epoch [6/15], Step [60/114], Loss: 100.7540
-Epoch [6/15], Step [70/114], Loss: 102.8923
-Epoch [6/15], Step [80/114], Loss: 96.7189
-Epoch [6/15], Step [90/114], Loss: 89.2720
-Epoch [6/15], Step [100/114], Loss: 108.1151
-Epoch [6/15], Step [110/114], Loss: 91.5961
-Epoch [6/15], Loss: 107.3729, Train Acc: 19.68%, Test Acc: 18.44%
-Epoch [7/15], Step [10/114], Loss: 97.9325
-Epoch [7/15], Step [20/114], Loss: 107.7364
-Epoch [7/15], Step [30/114], Loss: 111.8712
-Epoch [7/15], Step [40/114], Loss: 105.8763
-Epoch [7/15], Step [50/114], Loss: 127.1105
-Epoch [7/15], Step [60/114], Loss: 85.9085
-Epoch [7/15], Step [70/114], Loss: 104.4549
-Epoch [7/15], Step [80/114], Loss: 92.8782
-Epoch [7/15], Step [90/114], Loss: 89.4985
-Epoch [7/15], Step [100/114], Loss: 89.0598
-Epoch [7/15], Step [110/114], Loss: 103.9486
-Epoch [7/15], Loss: 100.9551, Train Acc: 21.70%, Test Acc: 20.03%
-Epoch [8/15], Step [10/114], Loss: 82.6518
-Epoch [8/15], Step [20/114], Loss: 72.1402
-Epoch [8/15], Step [30/114], Loss: 85.8812
-Epoch [8/15], Step [40/114], Loss: 106.7373
-Epoch [8/15], Step [50/114], Loss: 65.3741
-Epoch [8/15], Step [60/114], Loss: 92.3159
-Epoch [8/15], Step [70/114], Loss: 103.8069
-Epoch [8/15], Step [80/114], Loss: 90.3463
-Epoch [8/15], Step [90/114], Loss: 104.4114
-Epoch [8/15], Step [100/114], Loss: 83.4675
-Epoch [8/15], Step [110/114], Loss: 99.1653
-Epoch [8/15], Loss: 95.6406, Train Acc: 24.07%, Test Acc: 22.32%
-Epoch [9/15], Step [10/114], Loss: 90.5235
-Epoch [9/15], Step [20/114], Loss: 95.2982
-Epoch [9/15], Step [30/114], Loss: 118.3652
-Epoch [9/15], Step [40/114], Loss: 108.6330
-Epoch [9/15], Step [50/114], Loss: 82.1389
-Epoch [9/15], Step [60/114], Loss: 72.7389
-Epoch [9/15], Step [70/114], Loss: 100.7881
-Epoch [9/15], Step [80/114], Loss: 99.6334
-Epoch [9/15], Step [90/114], Loss: 67.8113
-Epoch [9/15], Step [100/114], Loss: 88.7210
-Epoch [9/15], Step [110/114], Loss: 106.1864
-Epoch [9/15], Loss: 91.0722, Train Acc: 25.83%, Test Acc: 23.97%
-Epoch [10/15], Step [10/114], Loss: 103.0106
-Epoch [10/15], Step [20/114], Loss: 85.9384
-Epoch [10/15], Step [30/114], Loss: 91.5016
-Epoch [10/15], Step [40/114], Loss: 77.0941
-Epoch [10/15], Step [50/114], Loss: 81.3017
-Epoch [10/15], Step [60/114], Loss: 87.0802
-Epoch [10/15], Step [70/114], Loss: 119.7546
-Epoch [10/15], Step [80/114], Loss: 83.9373
-Epoch [10/15], Step [90/114], Loss: 82.4379
-Epoch [10/15], Step [100/114], Loss: 89.2813
-Epoch [10/15], Step [110/114], Loss: 84.1455
-Epoch [10/15], Loss: 86.7516, Train Acc: 28.02%, Test Acc: 25.81%
-Epoch [11/15], Step [10/114], Loss: 66.2958
-Epoch [11/15], Step [20/114], Loss: 116.4171
-Epoch [11/15], Step [30/114], Loss: 78.6360
-Epoch [11/15], Step [40/114], Loss: 82.9127
-Epoch [11/15], Step [50/114], Loss: 92.0204
-Epoch [11/15], Step [60/114], Loss: 74.7754
-Epoch [11/15], Step [70/114], Loss: 93.4490
-Epoch [11/15], Step [80/114], Loss: 67.5465
-Epoch [11/15], Step [90/114], Loss: 96.0773
-Epoch [11/15], Step [100/114], Loss: 99.5915
-Epoch [11/15], Step [110/114], Loss: 86.3019
-Epoch [11/15], Loss: 82.8431, Train Acc: 29.52%, Test Acc: 27.95%
-Epoch [12/15], Step [10/114], Loss: 108.4676
-Epoch [12/15], Step [20/114], Loss: 83.3736
-Epoch [12/15], Step [30/114], Loss: 70.0317
-Epoch [12/15], Step [40/114], Loss: 85.6160
-Epoch [12/15], Step [50/114], Loss: 64.2821
-Epoch [12/15], Step [60/114], Loss: 76.5126
-Epoch [12/15], Step [70/114], Loss: 63.0437
-Epoch [12/15], Step [80/114], Loss: 81.5961
-Epoch [12/15], Step [90/114], Loss: 63.7446
-Epoch [12/15], Step [100/114], Loss: 81.7669
-Epoch [12/15], Step [110/114], Loss: 89.5766
-Epoch [12/15], Loss: 78.7993, Train Acc: 31.39%, Test Acc: 29.45%
-Epoch [13/15], Step [10/114], Loss: 74.6161
-Epoch [13/15], Step [20/114], Loss: 72.9845
-Epoch [13/15], Step [30/114], Loss: 67.9457
-Epoch [13/15], Step [40/114], Loss: 78.6065
-Epoch [13/15], Step [50/114], Loss: 89.9734
-Epoch [13/15], Step [60/114], Loss: 92.7274
-Epoch [13/15], Step [70/114], Loss: 66.8713
-Epoch [13/15], Step [80/114], Loss: 76.3067
-Epoch [13/15], Step [90/114], Loss: 75.9243
-Epoch [13/15], Step [100/114], Loss: 63.4011
-Epoch [13/15], Step [110/114], Loss: 80.6837
-Epoch [13/15], Loss: 75.2145, Train Acc: 33.00%, Test Acc: 31.29%
-Epoch [14/15], Step [10/114], Loss: 73.0708
-Epoch [14/15], Step [20/114], Loss: 81.5044
-Epoch [14/15], Step [30/114], Loss: 68.7207
-Epoch [14/15], Step [40/114], Loss: 88.8729
-Epoch [14/15], Step [50/114], Loss: 62.7843
-Epoch [14/15], Step [60/114], Loss: 78.3168
-Epoch [14/15], Step [70/114], Loss: 83.0055
-Epoch [14/15], Step [80/114], Loss: 73.8262
-Epoch [14/15], Step [90/114], Loss: 52.0894
-Epoch [14/15], Step [100/114], Loss: 78.2464
-Epoch [14/15], Step [110/114], Loss: 79.6903
-Epoch [14/15], Loss: 72.1241, Train Acc: 34.62%, Test Acc: 32.98%
-Epoch [15/15], Step [10/114], Loss: 80.4748
-Epoch [15/15], Step [20/114], Loss: 59.3739
-Epoch [15/15], Step [30/114], Loss: 89.3843
-Epoch [15/15], Step [40/114], Loss: 66.2065
-Epoch [15/15], Step [50/114], Loss: 55.8445
-Epoch [15/15], Step [60/114], Loss: 62.1898
-Epoch [15/15], Step [70/114], Loss: 68.1946
-Epoch [15/15], Step [80/114], Loss: 73.9930
-Epoch [15/15], Step [90/114], Loss: 75.9191
-Epoch [15/15], Step [100/114], Loss: 68.6925
-Epoch [15/15], Step [110/114], Loss: 74.5126
-Epoch [15/15], Loss: 69.0463, Train Acc: 36.25%, Test Acc: 33.73%
-Training completed in 4.24 seconds
+Starting training with initialization: uniform, gain: 10.0, learning rate: 0.001
+Epoch [1/15], Step [10/114], Loss: 151.4638
+Epoch [1/15], Step [20/114], Loss: 136.9143
+Epoch [1/15], Step [30/114], Loss: 122.2874
+Epoch [1/15], Step [40/114], Loss: 121.8948
+Epoch [1/15], Step [50/114], Loss: 122.9842
+Epoch [1/15], Step [60/114], Loss: 115.1997
+Epoch [1/15], Step [70/114], Loss: 114.2255
+Epoch [1/15], Step [80/114], Loss: 98.6735
+Epoch [1/15], Step [90/114], Loss: 91.2812
+Epoch [1/15], Step [100/114], Loss: 83.3101
+Epoch [1/15], Step [110/114], Loss: 82.5479
+Epoch [1/15], Loss: 113.0381, Train Acc: 12.07%, Test Acc: 11.81%
+Epoch [2/15], Step [10/114], Loss: 94.8212
+Epoch [2/15], Step [20/114], Loss: 79.1266
+Epoch [2/15], Step [30/114], Loss: 77.0611
+Epoch [2/15], Step [40/114], Loss: 63.6724
+Epoch [2/15], Step [50/114], Loss: 76.1801
+Epoch [2/15], Step [60/114], Loss: 69.5421
+Epoch [2/15], Step [70/114], Loss: 74.1228
+Epoch [2/15], Step [80/114], Loss: 64.6850
+Epoch [2/15], Step [90/114], Loss: 72.7638
+Epoch [2/15], Step [100/114], Loss: 65.9926
+Epoch [2/15], Step [110/114], Loss: 58.7737
+Epoch [2/15], Loss: 72.4118, Train Acc: 13.07%, Test Acc: 14.15%
+Epoch [3/15], Step [10/114], Loss: 65.6085
+Epoch [3/15], Step [20/114], Loss: 77.1464
+Epoch [3/15], Step [30/114], Loss: 63.3398
+Epoch [3/15], Step [40/114], Loss: 57.2421
+Epoch [3/15], Step [50/114], Loss: 63.1244
+Epoch [3/15], Step [60/114], Loss: 60.2200
+Epoch [3/15], Step [70/114], Loss: 72.8666
+Epoch [3/15], Step [80/114], Loss: 64.3010
+Epoch [3/15], Step [90/114], Loss: 61.5462
+Epoch [3/15], Step [100/114], Loss: 59.4209
+Epoch [3/15], Step [110/114], Loss: 56.6376
+Epoch [3/15], Loss: 61.2769, Train Acc: 16.17%, Test Acc: 17.79%
+Epoch [4/15], Step [10/114], Loss: 53.2840
+Epoch [4/15], Step [20/114], Loss: 58.3136
+Epoch [4/15], Step [30/114], Loss: 61.8442
+Epoch [4/15], Step [40/114], Loss: 56.5120
+Epoch [4/15], Step [50/114], Loss: 61.8966
+Epoch [4/15], Step [60/114], Loss: 66.5516
+Epoch [4/15], Step [70/114], Loss: 51.6368
+Epoch [4/15], Step [80/114], Loss: 55.1736
+Epoch [4/15], Step [90/114], Loss: 53.6692
+Epoch [4/15], Step [100/114], Loss: 60.1490
+Epoch [4/15], Step [110/114], Loss: 62.2230
+Epoch [4/15], Loss: 55.8941, Train Acc: 19.75%, Test Acc: 20.48%
+Epoch [5/15], Step [10/114], Loss: 55.9670
+Epoch [5/15], Step [20/114], Loss: 63.8884
+Epoch [5/15], Step [30/114], Loss: 46.7549
+Epoch [5/15], Step [40/114], Loss: 40.9011
+Epoch [5/15], Step [50/114], Loss: 49.1820
+Epoch [5/15], Step [60/114], Loss: 49.6185
+Epoch [5/15], Step [70/114], Loss: 51.7808
+Epoch [5/15], Step [80/114], Loss: 45.9444
+Epoch [5/15], Step [90/114], Loss: 58.7095
+Epoch [5/15], Step [100/114], Loss: 43.3724
+Epoch [5/15], Step [110/114], Loss: 45.7427
+Epoch [5/15], Loss: 51.1748, Train Acc: 22.45%, Test Acc: 22.17%
+Epoch [6/15], Step [10/114], Loss: 42.6436
+Epoch [6/15], Step [20/114], Loss: 47.2821
+Epoch [6/15], Step [30/114], Loss: 47.3066
+Epoch [6/15], Step [40/114], Loss: 55.3770
+Epoch [6/15], Step [50/114], Loss: 57.5504
+Epoch [6/15], Step [60/114], Loss: 41.8864
+Epoch [6/15], Step [70/114], Loss: 40.6587
+Epoch [6/15], Step [80/114], Loss: 43.8468
+Epoch [6/15], Step [90/114], Loss: 40.1908
+Epoch [6/15], Step [100/114], Loss: 50.6071
+Epoch [6/15], Step [110/114], Loss: 46.7704
+Epoch [6/15], Loss: 47.2194, Train Acc: 25.70%, Test Acc: 25.26%
+Epoch [7/15], Step [10/114], Loss: 41.7946
+Epoch [7/15], Step [20/114], Loss: 45.0518
+Epoch [7/15], Step [30/114], Loss: 39.4301
+Epoch [7/15], Step [40/114], Loss: 36.4188
+Epoch [7/15], Step [50/114], Loss: 52.8674
+Epoch [7/15], Step [60/114], Loss: 46.9088
+Epoch [7/15], Step [70/114], Loss: 43.7210
+Epoch [7/15], Step [80/114], Loss: 39.3899
+Epoch [7/15], Step [90/114], Loss: 38.1039
+Epoch [7/15], Step [100/114], Loss: 45.2536
+Epoch [7/15], Step [110/114], Loss: 33.0965
+Epoch [7/15], Loss: 43.9766, Train Acc: 28.47%, Test Acc: 27.55%
+Epoch [8/15], Step [10/114], Loss: 43.9991
+Epoch [8/15], Step [20/114], Loss: 37.2378
+Epoch [8/15], Step [30/114], Loss: 44.3460
+Epoch [8/15], Step [40/114], Loss: 33.3546
+Epoch [8/15], Step [50/114], Loss: 38.7541
+Epoch [8/15], Step [60/114], Loss: 45.7862
+Epoch [8/15], Step [70/114], Loss: 40.8519
+Epoch [8/15], Step [80/114], Loss: 40.5264
+Epoch [8/15], Step [90/114], Loss: 36.3827
+Epoch [8/15], Step [100/114], Loss: 35.4518
+Epoch [8/15], Step [110/114], Loss: 37.7563
+Epoch [8/15], Loss: 41.0922, Train Acc: 31.00%, Test Acc: 29.80%
+Epoch [9/15], Step [10/114], Loss: 45.9891
+Epoch [9/15], Step [20/114], Loss: 44.7845
+Epoch [9/15], Step [30/114], Loss: 55.5906
+Epoch [9/15], Step [40/114], Loss: 46.6996
+Epoch [9/15], Step [50/114], Loss: 37.5863
+Epoch [9/15], Step [60/114], Loss: 31.9372
+Epoch [9/15], Step [70/114], Loss: 33.1157
+Epoch [9/15], Step [80/114], Loss: 39.2911
+Epoch [9/15], Step [90/114], Loss: 33.6313
+Epoch [9/15], Step [100/114], Loss: 31.3816
+Epoch [9/15], Step [110/114], Loss: 41.0603
+Epoch [9/15], Loss: 38.4040, Train Acc: 33.08%, Test Acc: 31.69%
+Epoch [10/15], Step [10/114], Loss: 38.3088
+Epoch [10/15], Step [20/114], Loss: 32.2136
+Epoch [10/15], Step [30/114], Loss: 40.3470
+Epoch [10/15], Step [40/114], Loss: 31.4080
+Epoch [10/15], Step [50/114], Loss: 32.4450
+Epoch [10/15], Step [60/114], Loss: 36.6874
+Epoch [10/15], Step [70/114], Loss: 39.5371
+Epoch [10/15], Step [80/114], Loss: 30.4992
+Epoch [10/15], Step [90/114], Loss: 29.0520
+Epoch [10/15], Step [100/114], Loss: 41.6796
+Epoch [10/15], Step [110/114], Loss: 32.6471
+Epoch [10/15], Loss: 35.8392, Train Acc: 34.70%, Test Acc: 33.88%
+Epoch [11/15], Step [10/114], Loss: 37.7679
+Epoch [11/15], Step [20/114], Loss: 30.6084
+Epoch [11/15], Step [30/114], Loss: 27.8787
+Epoch [11/15], Step [40/114], Loss: 40.0473
+Epoch [11/15], Step [50/114], Loss: 23.7996
+Epoch [11/15], Step [60/114], Loss: 26.8741
+Epoch [11/15], Step [70/114], Loss: 26.3352
+Epoch [11/15], Step [80/114], Loss: 36.8429
+Epoch [11/15], Step [90/114], Loss: 40.8033
+Epoch [11/15], Step [100/114], Loss: 45.0783
+Epoch [11/15], Step [110/114], Loss: 32.4632
+Epoch [11/15], Loss: 33.9961, Train Acc: 36.50%, Test Acc: 35.18%
+Epoch [12/15], Step [10/114], Loss: 41.2285
+Epoch [12/15], Step [20/114], Loss: 39.5226
+Epoch [12/15], Step [30/114], Loss: 28.1875
+Epoch [12/15], Step [40/114], Loss: 33.1837
+Epoch [12/15], Step [50/114], Loss: 20.6522
+Epoch [12/15], Step [60/114], Loss: 27.8338
+Epoch [12/15], Step [70/114], Loss: 31.1920
+Epoch [12/15], Step [80/114], Loss: 32.3267
+Epoch [12/15], Step [90/114], Loss: 41.0312
+Epoch [12/15], Step [100/114], Loss: 32.6764
+Epoch [12/15], Step [110/114], Loss: 34.2834
+Epoch [12/15], Loss: 31.9870, Train Acc: 38.84%, Test Acc: 38.61%
+Epoch [13/15], Step [10/114], Loss: 29.7833
+Epoch [13/15], Step [20/114], Loss: 25.4098
+Epoch [13/15], Step [30/114], Loss: 33.8045
+Epoch [13/15], Step [40/114], Loss: 27.5780
+Epoch [13/15], Step [50/114], Loss: 28.8597
+Epoch [13/15], Step [60/114], Loss: 23.8302
+Epoch [13/15], Step [70/114], Loss: 31.5151
+Epoch [13/15], Step [80/114], Loss: 21.3727
+Epoch [13/15], Step [90/114], Loss: 21.4233
+Epoch [13/15], Step [100/114], Loss: 32.0415
+Epoch [13/15], Step [110/114], Loss: 38.5449
+Epoch [13/15], Loss: 29.9342, Train Acc: 41.13%, Test Acc: 39.16%
+Epoch [14/15], Step [10/114], Loss: 28.8401
+Epoch [14/15], Step [20/114], Loss: 33.8875
+Epoch [14/15], Step [30/114], Loss: 24.5957
+Epoch [14/15], Step [40/114], Loss: 31.9040
+Epoch [14/15], Step [50/114], Loss: 21.3334
+Epoch [14/15], Step [60/114], Loss: 31.0667
+Epoch [14/15], Step [70/114], Loss: 22.9908
+Epoch [14/15], Step [80/114], Loss: 26.2807
+Epoch [14/15], Step [90/114], Loss: 25.1129
+Epoch [14/15], Step [100/114], Loss: 25.3933
+Epoch [14/15], Step [110/114], Loss: 29.4686
+Epoch [14/15], Loss: 28.4523, Train Acc: 42.66%, Test Acc: 41.01%
+Epoch [15/15], Step [10/114], Loss: 21.2170
+Epoch [15/15], Step [20/114], Loss: 25.6013
+Epoch [15/15], Step [30/114], Loss: 37.2362
+Epoch [15/15], Step [40/114], Loss: 29.3544
+Epoch [15/15], Step [50/114], Loss: 31.9977
+Epoch [15/15], Step [60/114], Loss: 27.4674
+Epoch [15/15], Step [70/114], Loss: 25.5389
+Epoch [15/15], Step [80/114], Loss: 30.1360
+Epoch [15/15], Step [90/114], Loss: 16.2927
+Epoch [15/15], Step [100/114], Loss: 30.8667
+Epoch [15/15], Step [110/114], Loss: 29.5980
+Epoch [15/15], Loss: 26.9320, Train Acc: 44.69%, Test Acc: 43.00%
+Training completed in 4.32 seconds
 Training curves saved
-Accuracy of digit 0: 41.78% (150/359)
-Accuracy of digit 1: 64.39% (170/264)
-Accuracy of digit 2: 31.31% (62/198)
-Accuracy of digit 3: 18.67% (31/166)
-Accuracy of digit 4: 34.00% (68/200)
-Accuracy of digit 5: 8.75% (14/160)
-Accuracy of digit 6: 20.00% (34/170)
-Accuracy of digit 7: 52.38% (77/147)
-Accuracy of digit 8: 10.24% (17/166)
-Accuracy of digit 9: 30.51% (54/177)
-Overall Test Accuracy: 33.73% (677/2007)
+Accuracy of digit 0: 62.95% (226/359)
+Accuracy of digit 1: 84.47% (223/264)
+Accuracy of digit 2: 45.45% (90/198)
+Accuracy of digit 3: 28.92% (48/166)
+Accuracy of digit 4: 38.00% (76/200)
+Accuracy of digit 5: 21.25% (34/160)
+Accuracy of digit 6: 30.00% (51/170)
+Accuracy of digit 7: 27.21% (40/147)
+Accuracy of digit 8: 14.46% (24/166)
+Accuracy of digit 9: 28.81% (51/177)
+Overall Test Accuracy: 43.00% (863/2007)
 
 
 Summary of Initialization Experiments:
 Strategy               Accuracy
 -------------------- ----------
-Too Small Init            96.01%
-Effective Init            96.16%
-Too Large Init            33.73%
+Zeros Init                17.89%
+Kaiming Normal Init       96.11%
+Uniform (Large) Init      43.00%
+Using device: cuda
+Loading training data...
+Loading test data...
+Loading pre-trained model from cnn_model_kaiming_normal_gain1.0_lr0.001_mom0.9.pth
+Accuracy of digit 0: 98.61% (354/359)
+Accuracy of digit 1: 98.11% (259/264)
+Accuracy of digit 2: 94.44% (187/198)
+Accuracy of digit 3: 92.17% (153/166)
+Accuracy of digit 4: 95.00% (190/200)
+Accuracy of digit 5: 95.62% (153/160)
+Accuracy of digit 6: 97.65% (166/170)
+Accuracy of digit 7: 94.56% (139/147)
+Accuracy of digit 8: 93.37% (155/166)
+Accuracy of digit 9: 97.74% (173/177)
+Overall Test Accuracy: 96.11% (1929/2007)
 
-
-Experiment complete. Final accuracy: 96.16%
+Experiment complete. Final accuracy: 96.11%

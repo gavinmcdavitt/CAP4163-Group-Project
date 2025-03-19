@@ -9,7 +9,7 @@ import argparse
 
 # Define the convolutional neural network
 class ConvNet(nn.Module):
-    def __init__(self, init_strategy='default', init_gain=1.0):
+    def __init__(self):
         super(ConvNet, self).__init__()
         
         # Layer 1: Convolutional layer with 32 filters of size 5x5, stride 1, padding 2
@@ -34,8 +34,8 @@ class ConvNet(nn.Module):
         # Input: 1024, Output: 10
         self.fc = nn.Linear(4 * 4 * 64, 10)
         
-        # Initialize weights based on the chosen strategy
-        self.initialize_weights(init_strategy, init_gain)
+        # Initialize with Kaiming normal for ReLU and Xavier/Glorot for sigmoid
+        self.initialize_weights()
     
     def forward(self, x):
         # Reshape input if necessary
@@ -54,78 +54,18 @@ class ConvNet(nn.Module):
         
         return x
     
-    def initialize_weights(self, strategy, gain=1.0):
-        if strategy == 'default':
-            # PyTorch default initialization
-            pass
-        elif strategy == 'zeros':
-            # Initialize all weights to zero (very poor strategy)
-            for m in self.modules():
-                if isinstance(m, (nn.Conv2d, nn.Linear)):
-                    nn.init.zeros_(m.weight)
-                    if m.bias is not None:
-                        nn.init.zeros_(m.bias)
-        elif strategy == 'ones':
-            # Initialize all weights to 1 (poor strategy)
-            for m in self.modules():
-                if isinstance(m, (nn.Conv2d, nn.Linear)):
-                    nn.init.ones_(m.weight)
-                    if m.bias is not None:
-                        nn.init.zeros_(m.bias)
-        elif strategy == 'normal':
-            # Initialize weights from normal distribution
-            for m in self.modules():
-                if isinstance(m, (nn.Conv2d, nn.Linear)):
-                    nn.init.normal_(m.weight, mean=0.0, std=gain)
-                    if m.bias is not None:
-                        nn.init.zeros_(m.bias)
-        elif strategy == 'uniform':
-            # Initialize weights from uniform distribution
-            for m in self.modules():
-                if isinstance(m, (nn.Conv2d, nn.Linear)):
-                    nn.init.uniform_(m.weight, a=-gain, b=gain)
-                    if m.bias is not None:
-                        nn.init.zeros_(m.bias)
-        elif strategy == 'xavier_uniform':
-            # Xavier/Glorot uniform initialization
-            for m in self.modules():
-                if isinstance(m, (nn.Conv2d, nn.Linear)):
-                    nn.init.xavier_uniform_(m.weight, gain=gain)
-                    if m.bias is not None:
-                        nn.init.zeros_(m.bias)
-        elif strategy == 'xavier_normal':
-            # Xavier/Glorot normal initialization
-            for m in self.modules():
-                if isinstance(m, (nn.Conv2d, nn.Linear)):
-                    nn.init.xavier_normal_(m.weight, gain=gain)
-                    if m.bias is not None:
-                        nn.init.zeros_(m.bias)
-        elif strategy == 'kaiming_uniform':
-            # Kaiming/He uniform initialization
-            for m in self.modules():
-                if isinstance(m, (nn.Conv2d, nn.Linear)):
-                    if isinstance(m, nn.Conv2d) or isinstance(m, nn.Linear) and m != self.fc:
-                        # For layers with ReLU
-                        nn.init.kaiming_uniform_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
-                    elif isinstance(m, nn.Linear) and m == self.fc:
-                        # For the final layer
-                        nn.init.kaiming_uniform_(m.weight, a=0, mode='fan_in', nonlinearity='linear')
-                    if m.bias is not None:
-                        nn.init.zeros_(m.bias)
-        elif strategy == 'kaiming_normal':
-            # Kaiming/He normal initialization
-            for m in self.modules():
-                if isinstance(m, (nn.Conv2d, nn.Linear)):
-                    if isinstance(m, nn.Conv2d) or isinstance(m, nn.Linear) and m != self.fc:
-                        # For layers with ReLU
-                        nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
-                    elif isinstance(m, nn.Linear) and m == self.fc:
-                        # For the final layer
-                        nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='linear')
-                    if m.bias is not None:
-                        nn.init.zeros_(m.bias)
-        else:
-            raise ValueError(f"Unknown initialization strategy: {strategy}")
+    def initialize_weights(self):
+        # Initialize first conv layer with Kaiming normal (good for ReLU)
+        nn.init.kaiming_normal_(self.conv1.weight, mode='fan_out', nonlinearity='relu')
+        nn.init.zeros_(self.conv1.bias)
+        
+        # Initialize second conv layer with Xavier/Glorot (good for sigmoid)
+        nn.init.xavier_normal_(self.conv2.weight, gain=1.0)
+        nn.init.zeros_(self.conv2.bias)
+        
+        # Initialize fully connected layer
+        nn.init.kaiming_normal_(self.fc.weight, mode='fan_in', nonlinearity='linear')
+        nn.init.zeros_(self.fc.bias)
 
 # Function to load data from the specified file
 def load_data(file_path):
@@ -140,8 +80,8 @@ def load_data(file_path):
     return np.array(data), np.array(labels)
 
 # Function to train and evaluate the model
-def train_and_evaluate(init_strategy='default', init_gain=1.0, learning_rate=0.001, momentum=0.9, 
-                      num_epochs=15, batch_size=64, force_retrain=False, use_early_stopping=True):
+def train_and_evaluate(learning_rate=0.001, num_epochs=15, batch_size=64, 
+                      force_retrain=False, use_early_stopping=True, optimizer_type='adam'):
     # Set random seed for reproducibility
     torch.manual_seed(42)
     np.random.seed(42)
@@ -167,14 +107,18 @@ def train_and_evaluate(init_strategy='default', init_gain=1.0, learning_rate=0.0
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     
     # Initialize the network
-    model = ConvNet(init_strategy=init_strategy, init_gain=init_gain).to(device)
+    model = ConvNet().to(device)
     
     # Loss and optimizer
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+    
+    if optimizer_type.lower() == 'adam':
+        optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+    else:  # SGD
+        optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
     
     # Define model save path based on parameters
-    model_save_path = f'cnn_model_{init_strategy}_gain{init_gain}_lr{learning_rate}_mom{momentum}.pth'
+    model_save_path = f'cnn_model_lr{learning_rate}_{optimizer_type}.pth'
     
     # Training variables
     best_accuracy = 0.0
@@ -195,7 +139,7 @@ def train_and_evaluate(init_strategy='default', init_gain=1.0, learning_rate=0.0
         start_time = time.time()
         
         # Training loop
-        print(f"Starting training with initialization: {init_strategy}, gain: {init_gain}, learning rate: {learning_rate}")
+        print(f"Starting training with learning rate: {learning_rate}, optimizer: {optimizer_type}")
         for epoch in range(num_epochs):
             model.train()
             running_loss = 0.0
@@ -269,27 +213,27 @@ def train_and_evaluate(init_strategy='default', init_gain=1.0, learning_rate=0.0
         
         plt.subplot(1, 3, 1)
         plt.plot(range(1, len(train_losses) + 1), train_losses, 'b-')
-        plt.title('Training Loss')
+        plt.title(f'Training Loss (LR={learning_rate})')
         plt.xlabel('Epoch')
         plt.ylabel('Loss')
         plt.grid(True)
         
         plt.subplot(1, 3, 2)
         plt.plot(range(1, len(train_accuracies) + 1), train_accuracies, 'g-')
-        plt.title('Training Accuracy')
+        plt.title(f'Training Accuracy (LR={learning_rate})')
         plt.xlabel('Epoch')
         plt.ylabel('Accuracy (%)')
         plt.grid(True)
         
         plt.subplot(1, 3, 3)
         plt.plot(range(1, len(test_accuracies) + 1), test_accuracies, 'r-')
-        plt.title('Test Accuracy')
+        plt.title(f'Test Accuracy (LR={learning_rate})')
         plt.xlabel('Epoch')
         plt.ylabel('Accuracy (%)')
         plt.grid(True)
         
         plt.tight_layout()
-        plt.savefig(f'cnn_model_{init_strategy}_gain{init_gain}_lr{learning_rate}_curves.png')
+        plt.savefig(f'cnn_model_lr{learning_rate}_{optimizer_type}_curves.png')
         print(f"Training curves saved")
     
     # Final evaluation
@@ -320,21 +264,15 @@ def train_and_evaluate(init_strategy='default', init_gain=1.0, learning_rate=0.0
 
 # Main function with parameter testing
 def main():
-    parser = argparse.ArgumentParser(description='Train and evaluate ConvNet with different initializations')
-    parser.add_argument('--init', type=str, default='kaiming_normal', 
-                       choices=['default', 'zeros', 'ones', 'normal', 'uniform', 
-                                'xavier_uniform', 'xavier_normal', 'kaiming_uniform', 'kaiming_normal'],
-                       help='Weight initialization strategy')
-    parser.add_argument('--gain', type=float, default=1.0, 
-                       help='Gain factor for weight initialization')
+    parser = argparse.ArgumentParser(description='Train and evaluate ConvNet with different learning rates')
     parser.add_argument('--lr', type=float, default=0.001, 
                        help='Learning rate')
-    parser.add_argument('--momentum', type=float, default=0.9, 
-                       help='Momentum value (for reference only, Adam optimizer is used)')
     parser.add_argument('--epochs', type=int, default=15, 
                        help='Number of training epochs')
     parser.add_argument('--batch-size', type=int, default=64, 
                        help='Batch size for training')
+    parser.add_argument('--optimizer', type=str, default='adam', choices=['adam', 'sgd'],
+                       help='Optimizer type (adam or sgd)')
     parser.add_argument('--force-retrain', action='store_true', 
                        help='Force retraining even if a saved model exists')
     parser.add_argument('--no-early-stopping', action='store_true', 
@@ -344,61 +282,58 @@ def main():
     
     # Train and evaluate with the specified parameters
     accuracy, _ = train_and_evaluate(
-        init_strategy=args.init,
-        init_gain=args.gain,
         learning_rate=args.lr,
-        momentum=args.momentum,
         num_epochs=args.epochs,
         batch_size=args.batch_size,
+        optimizer_type=args.optimizer,
         force_retrain=args.force_retrain,
         use_early_stopping=not args.no_early_stopping
     )
     
     print(f"\nExperiment complete. Final accuracy: {accuracy:.2f}%")
 
-# Function to run a series of initialization experiments
-def run_initialization_experiments():
-    # Strategies to test
-    strategies = [
-        # Strategy that should lead to slow learning
-        {'init': 'zeros', 'gain': 1.0, 'lr': 0.001, 'name': 'Zeros Init'},
-        
-        # Strategy that should lead to effective learning
-        {'init': 'kaiming_normal', 'gain': 1.0, 'lr': 0.001, 'name': 'Kaiming Normal Init'},
-        
-        # Strategy that should lead to unstable learning
-        {'init': 'uniform', 'gain': 10.0, 'lr': 0.001, 'name': 'Uniform (Large) Init'}
-    ]
+# Function to run a series of learning rate experiments
+def run_learning_rate_experiments():
+    # Learning rates to test
+    learning_rates = [0.0001, 0.001, 0.01, 0.1]
     
     results = []
     
-    for strategy in strategies:
+    for lr in learning_rates:
         print(f"\n\n{'='*80}")
-        print(f"Testing initialization: {strategy['name']}")
+        print(f"Testing learning rate: {lr}")
         print(f"{'='*80}\n")
         
         accuracy, _ = train_and_evaluate(
-            init_strategy=strategy['init'],
-            init_gain=strategy['gain'],
-            learning_rate=strategy['lr'],
+            learning_rate=lr,
             force_retrain=True  # Force retrain for experiment
         )
         
         results.append({
-            'strategy': strategy['name'],
+            'learning_rate': lr,
             'accuracy': accuracy
         })
     
     # Print summary of results
-    print("\n\nSummary of Initialization Experiments:")
-    print(f"{'Strategy':<20} {'Accuracy':>10}")
-    print(f"{'-'*20} {'-'*10}")
+    print("\n\nSummary of Learning Rate Experiments:")
+    print(f"{'Learning Rate':<15} {'Accuracy':>10}")
+    print(f"{'-'*15} {'-'*10}")
     for result in results:
-        print(f"{result['strategy']:<20} {result['accuracy']:>10.2f}%")
+        print(f"{result['learning_rate']:<15} {result['accuracy']:>10.2f}%")
+    
+    # Plot learning rate vs accuracy
+    plt.figure(figsize=(10, 6))
+    plt.semilogx([r['learning_rate'] for r in results], [r['accuracy'] for r in results], 'bo-')
+    plt.title('Learning Rate Effect on Accuracy')
+    plt.xlabel('Learning Rate (log scale)')
+    plt.ylabel('Test Accuracy (%)')
+    plt.grid(True)
+    plt.savefig('learning_rate_impact_cnn.png')
+    print("Learning rate impact plot saved as 'learning_rate_impact_cnn.png'")
 
 if __name__ == "__main__":
-    # Uncomment to run experiments
-    run_initialization_experiments()
+    # Uncomment to run learning rate experiments
+    run_learning_rate_experiments()
     
     # Regular execution with command line arguments
     main()
